@@ -8,7 +8,10 @@ function getUrlParam(name) {
 }
 
 var num = getUrlParam('num');
-num = (num == null) ? 50 : Number.parseInt(num);
+num = (num === null) ? 50 : Number.parseInt(num);
+
+var allowEdit = getUrlParam('edit');
+allowEdit = (allowEdit === null) ? true : false;
 
 var exam = {
 	loadComplete: false,
@@ -18,7 +21,7 @@ var exam = {
 	isAnswered: [], //题目回答状态
 	timeReleased: false, //时间用尽
 	isStarted: false, //活动是否开始
-	timeLength: 20 * 60 * 1000, //启用时间限制 0为不限制
+	timeLength: 0, //启用时间限制 0为不限制
 	sourceList: [], //原题目顺序
 	scoresPerAnswer: 0, //每道题目分数
 	isSubmit: false, //数据是否提交
@@ -29,14 +32,15 @@ var exam = {
 	examPaper: "safe", //试卷文件
 	sportDate: "9月1日至20日",
 	sportid: SPORT.QUALITY,
-	editAnswer: false, //允许修改答案
+	editAnswer: allowEdit, //允许修改答案
 	curID: 0, //当前答题数
 	realMatch: true, //实时提交分数，用于比赛中用户成绩获取
 	showTips: false,
 	lastPage: 0,
 	secColor: [],
-	debug: true, //无网络测试模式
-	titleNumPerPart: 5 // 每关题目数量
+	debug: false, //无网络测试模式
+	titleNumPerPart: 5, // 每关题目数量
+	part: 3 //答题关数
 };
 
 module.exports = exam;

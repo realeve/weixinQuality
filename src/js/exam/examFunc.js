@@ -177,17 +177,24 @@ function validate(data) {
 
 function submitData(bCheck, answerNums, exam) {
 	//清空错误数据
-	exam.error = [];
+	exam.error = {};
 	//得分清零
 	exam.total = 0;
+	//计算关卡
+	var order;
 
-	answerNums = (answerNums + 1) < exam.maxAnswerNum ? (answerNums + 1) : exam.maxAnswerNum;
+	answerNums = Math.min((answerNums + 1), exam.maxAnswerNum);
 
 	exam.answerList.map(function(scores, i) {
 		exam.total += scores;
+		order = Math.floor(i / exam.titleNumPerPart);
+		if (typeof exam.error[order] == 'undefined') {
+			exam.error[order] = [];
+		}
+
 		if (!scores) {
 			//错误题目推送原题目的顺序
-			exam.error.push(exam.sourceList[i]);
+			exam.error[order].push(exam.sourceList[order][i % exam.titleNumPerPart]);
 		}
 	});
 
@@ -197,12 +204,15 @@ function submitData(bCheck, answerNums, exam) {
 			return exam;
 		}
 	}
+	/*
 	var errStr = '';
 	exam.error.map(function(elem) {
 		errStr += elem + ',';
 	});
 
-	errStr = (errStr.length) ? errStr.substring(0, errStr.length - 1) : '-1';
+	errStr = (errStr.length) ? errStr.substring(0, errStr.length - 1) : '-1';*/
+
+	var errStr = JSON.stringify(exam.error);
 
 	var data = {
 		score: (exam.total * exam.scoresPerAnswer).toFixed(0),
@@ -220,7 +230,8 @@ function submitData(bCheck, answerNums, exam) {
 	if (!bCheck && data.answer_nums < exam.maxAnswerNum) {
 		data.iTimes = 2;
 	}
-	if (exam.timeLength == 0) {
+
+	if (bCheck && exam.timeLength == 0) {
 		$.modal({
 			title: "提示",
 			text: "您确定要交卷吗?",
@@ -316,7 +327,7 @@ module.exports = {
 		var str = '<div class="slide">' +
 			'<h1 class="answer-num title-hor blue-font">第<span>' + i + '</span>题</h1>' +
 			'<div class="weui_cells_title blue-font" style="margin-top:-5px;line-height:1.2;">' + data.title + '</div>' +
-			'<div class="weui_cells weui_cells_checkbox weui_cells_dark weui_cells_dark_myerr blue-font" data-id=' + (i - 6 + pNum * 5) + ' data-order=' + (i - 1) + ' data-answer=' + (oldOrder[data.answer - 1] + 1) + '>';
+			'<div class="weui_cells weui_cells_checkbox weui_cells_dark weui_cells_dark_myerr blue-font" data-id=' + (i - 6 + pNum * 5) + ' data-order=' + (pNum - 1) + ' data-answer=' + (oldOrder[data.answer - 1] + 1) + '>';
 
 		data.question.map(function(qTitle, idx) {
 			ques[idx] = '';
@@ -347,6 +358,13 @@ module.exports = {
 		var answerInfo = obj.parent().find('.weui_cell_primary');
 		var curScore = (answerInfo.data('value') + 1 == answerPrnt.data('answer')) ? 1 : 0;
 		var curID = answerPrnt.data('id');
+		var order = answerPrnt.data('order');
+
+		if (exam.isAnswered[curID]) {
+			return;
+		}
+
+		var needCheck = ((curID + 1) % 5) === 0;
 
 		//增加此条件将存在修改答案后分数不变的BUG
 		//if (!exam.isAnswered[curID])
@@ -359,18 +377,25 @@ module.exports = {
 				timeReleasedTip(exam.lastPage);
 			} else {
 
-				//未到最后一题
-				//
+				//未到每关最后一题 //未到最后一题
 				if (curID <= exam.maxAnswerNum - 1) {
 					//如果当前答对，并且在实时比赛模式才提交分数
 					if ( /*curScore && */ exam.realMatch) {
 						//直接提交当前数据，不需审核
 						exam = submitData(false, curID, exam);
+						var errNums = exam.error[order].length;
+						if (needCheck && errNums > 1) {
+							$.alert("本关做错" + errNums + "题,本次答题结束！", "警告!", function() {
+								$.fn.fullpage.moveTo(0, lastPage - 2);
+							});
+						}
 					}
 
-					setTimeout(function() {
-						$.fn.fullpage.moveTo(0, curID + 3);
-					}, 300);
+					if (!needCheck) {
+						setTimeout(function() {
+							$.fn.fullpage.moveTo(0, curID + 4 + order);
+						}, 300);
+					}
 				}
 			}
 		}

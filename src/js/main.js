@@ -83,10 +83,11 @@ var app = function() {
 		var titleNumPerPart;
 		var strNext = '<div class="weui_opr_area"><p class="weui_btn_area"><a href="javascript:;" class="weui_btn weui_btn_primary weui_btn_primary_yellow"';
 		var strTips;
-		for (var pNum = 1; pNum < 4; pNum++) {
+
+		for (var pNum = 1; pNum <= exam.part; pNum++) {
 			strTips = '<div class="slide center">' +
 				'<div name="fixed" style="margin:0 auto;position:absolute;top:20%;">' +
-				'<h1 class="white-font headerTitle" style="line-height: 1.4em;font-size:3em;">第' +pNum+ '关</h1>' +
+				'<h1 class="white-font headerTitle" style="line-height: 1.4em;font-size:3em;">第' + pNum + '关</h1>' +
 				'<article class="weui_article white-font" style="padding-top: 40px;line-height: .5em;color:#eee;">' +
 				'<p style="font-size:2.5em;">基础知识</p>' +
 				'</article>' +
@@ -97,16 +98,17 @@ var app = function() {
 			question = questionList['part' + pNum];
 			$('[name="sucessInfo"]').before(strTips);
 			//管三活动，仅前200道题目参与问答
-			exam.sourceList = util.getRandomArr(question.length);
+			exam.sourceList[pNum - 1] = util.getRandomArr(question.length);
 			titleNumPerPart = Math.min(question.length, exam.titleNumPerPart);
 			quesLen += titleNumPerPart;
 
 			for (var i = 0; i < titleNumPerPart; i++) {
-				$('[name="sucessInfo"]').before(util.getExamTemplate(question[exam.sourceList[i]], i + 1, pNum));
+				$('[name="sucessInfo"]').before(util.getExamTemplate(question[exam.sourceList[pNum - 1][i]], i + 1, pNum));
 				exam.isAnswered[i] = 0;
 			}
 			var str = strNext + ((pNum == 3) ? ' id="submit">交卷</a></p></div>' : ' name="next">下一关</a></p></div>');
 			$('.answer-num').last().parent().append(str);
+
 
 		}
 
@@ -114,8 +116,12 @@ var app = function() {
 		exam.lastPage = quesLen + 3 + (pNum - 1);
 		exam.maxAnswerNum = quesLen;
 		$('[name="nums"]').text(quesLen);
-		//exam.scoresPerAnswer = 1;
-		exam.scoresPerAnswer = 100 / quesLen;
+
+		//关卡模式，每题4分，每关20分
+		exam.scoresPerAnswer = 4;
+
+		//exam.scoresPerAnswer = 100 / quesLen;
+		//
 		$('[name="scores"]').text(exam.scoresPerAnswer.toFixed(0));
 
 
