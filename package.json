@@ -1,0 +1,33 @@
+{
+  "name": "weixinExam",
+  "version": "1.0.0",
+  "description": "微信答题活动",
+  "main": "bundle.js",
+  "scripts": {
+    "start": "webpack --progress --color",
+    "build": "webpack -p --config webpack.production.config.js --progress --color",
+    "debug": "webpack-dev-server --watch"
+  },
+  "keywords": [
+    "webpack"
+  ],
+  "author": "realeve",
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^6.4.0",
+    "copy-webpack-plugin": "^3.0.1",
+    "css-loader": "^0.23.1",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.9.0",
+    "html-webpack-plugin": "^2.22.0",
+    "imports-loader": "^0.6.5",
+    "jquery": "^2.1.4",
+    "postcss-loader": "^0.9.1",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "watchpack": "^1.1.0",
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.14.1",
+	"json-loader": "^0.5.4"
+  }
+}
