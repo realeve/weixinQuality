@@ -3398,192 +3398,201 @@
 /***/ function(module, exports) {
 
 	module.exports = {
-		"part1": [
-			{
-				"title": "本次成本月活动主题是（  ）",
-				"answer": 3,
-				"question": [
-					"全员降本增效，促进管理提升",
-					"优化成本管理，加快内涵发展",
-					"加强&quot;三全&quot;成本管理，促进公司转型发展",
-					"增强成本意识，同创企业效益。"
-				]
-			},
-			{
-				"title": "成钞公司的成本方针是（  ）",
-				"answer": 1,
-				"question": [
-					"全员、全过程、全要素",
-					"优化成本、创造价值",
-					"内涵式发展、成本行业领先",
-					"控制成本、降本增效"
-				]
-			},
-			{
-				"title": "成钞公司的成本理念（  ）",
-				"answer": 3,
-				"question": [
-					"优化成本管理，加快内涵发展",
-					"全员降本增效，促进管理提升",
-					"优化成本，创造价值",
-					"全员参与，降本增效"
-				]
-			},
-			{
-				"title": "成钞公司的成本战略（  ）",
-				"answer": 2,
-				"question": [
-					"精益生产，成本达到行业领先",
-					"成本领先",
-					"追求卓越",
-					"最大限度降低企业管理和运营成本"
-				]
-			},
-			{
-				"title": "全面成本管理的核心（  ）",
-				"answer": 1,
-				"question": [
-					"就是把成本降到尽可能低的水平加以保持",
-					"就是控制不必要、不合理成本因素",
-					"就是全面、系统、充分和准确地识别和确定提高成本因素",
-					"就是认识、理解、掌握和运用好提高成本因素的性质"
-				]
-			},
-			{
-				"title": "降低和保持成本的核心（  ）",
-				"answer": 2,
-				"question": [
-					"就是把成本降到尽可能低的水平加以保持",
-					"就是控制不必要、不合理成本因素",
-					"就是全面、系统、充分和准确地识别和确定提高成本因素",
-					"就是认识、理解、掌握和运用好提高成本因素的性质"
-				]
-			}
-		],
-		"part2": [
-			{
-				"title": "本次成本月活动主题是（  ）",
-				"answer": 3,
-				"question": [
-					"全员降本增效，促进管理提升",
-					"优化成本管理，加快内涵发展",
-					"加强&quot;三全&quot;成本管理，促进公司转型发展",
-					"增强成本意识，同创企业效益。"
-				]
-			},
-			{
-				"title": "成钞公司的成本方针是（  ）",
-				"answer": 1,
-				"question": [
-					"全员、全过程、全要素",
-					"优化成本、创造价值",
-					"内涵式发展、成本行业领先",
-					"控制成本、降本增效"
-				]
-			},
-			{
-				"title": "成钞公司的成本理念（  ）",
-				"answer": 3,
-				"question": [
-					"优化成本管理，加快内涵发展",
-					"全员降本增效，促进管理提升",
-					"优化成本，创造价值",
-					"全员参与，降本增效"
-				]
-			},
-			{
-				"title": "成钞公司的成本战略（  ）",
-				"answer": 2,
-				"question": [
-					"精益生产，成本达到行业领先",
-					"成本领先",
-					"追求卓越",
-					"最大限度降低企业管理和运营成本"
-				]
-			},
-			{
-				"title": "全面成本管理的核心（  ）",
-				"answer": 1,
-				"question": [
-					"就是把成本降到尽可能低的水平加以保持",
-					"就是控制不必要、不合理成本因素",
-					"就是全面、系统、充分和准确地识别和确定提高成本因素",
-					"就是认识、理解、掌握和运用好提高成本因素的性质"
-				]
-			},
-			{
-				"title": "降低和保持成本的核心（  ）",
-				"answer": 2,
-				"question": [
-					"就是把成本降到尽可能低的水平加以保持",
-					"就是控制不必要、不合理成本因素",
-					"就是全面、系统、充分和准确地识别和确定提高成本因素",
-					"就是认识、理解、掌握和运用好提高成本因素的性质"
-				]
-			}
-		],
-		"part3": [
-			{
-				"title": "本次成本月活动主题是（  ）",
-				"answer": 3,
-				"question": [
-					"全员降本增效，促进管理提升",
-					"优化成本管理，加快内涵发展",
-					"加强&quot;三全&quot;成本管理，促进公司转型发展",
-					"增强成本意识，同创企业效益。"
-				]
-			},
-			{
-				"title": "成钞公司的成本方针是（  ）",
-				"answer": 1,
-				"question": [
-					"全员、全过程、全要素",
-					"优化成本、创造价值",
-					"内涵式发展、成本行业领先",
-					"控制成本、降本增效"
-				]
-			},
-			{
-				"title": "成钞公司的成本理念（  ）",
-				"answer": 3,
-				"question": [
-					"优化成本管理，加快内涵发展",
-					"全员降本增效，促进管理提升",
-					"优化成本，创造价值",
-					"全员参与，降本增效"
-				]
-			},
-			{
-				"title": "成钞公司的成本战略（  ）",
-				"answer": 2,
-				"question": [
-					"精益生产，成本达到行业领先",
-					"成本领先",
-					"追求卓越",
-					"最大限度降低企业管理和运营成本"
-				]
-			},
-			{
-				"title": "全面成本管理的核心（  ）",
-				"answer": 1,
-				"question": [
-					"就是把成本降到尽可能低的水平加以保持",
-					"就是控制不必要、不合理成本因素",
-					"就是全面、系统、充分和准确地识别和确定提高成本因素",
-					"就是认识、理解、掌握和运用好提高成本因素的性质"
-				]
-			},
-			{
-				"title": "降低和保持成本的核心（  ）",
-				"answer": 2,
-				"question": [
-					"就是把成本降到尽可能低的水平加以保持",
-					"就是控制不必要、不合理成本因素",
-					"就是全面、系统、充分和准确地识别和确定提高成本因素",
-					"就是认识、理解、掌握和运用好提高成本因素的性质"
-				]
-			}
-		]
+		"part0": {
+			"name": "基础知识",
+			"data": [
+				{
+					"title": "本次成本月活动主题是（  ）",
+					"answer": 3,
+					"question": [
+						"全员降本增效，促进管理提升",
+						"优化成本管理，加快内涵发展",
+						"加强&quot;三全&quot;成本管理，促进公司转型发展",
+						"增强成本意识，同创企业效益。"
+					]
+				},
+				{
+					"title": "成钞公司的成本方针是（  ）",
+					"answer": 1,
+					"question": [
+						"全员、全过程、全要素",
+						"优化成本、创造价值",
+						"内涵式发展、成本行业领先",
+						"控制成本、降本增效"
+					]
+				},
+				{
+					"title": "成钞公司的成本理念（  ）",
+					"answer": 3,
+					"question": [
+						"优化成本管理，加快内涵发展",
+						"全员降本增效，促进管理提升",
+						"优化成本，创造价值",
+						"全员参与，降本增效"
+					]
+				},
+				{
+					"title": "成钞公司的成本战略（  ）",
+					"answer": 2,
+					"question": [
+						"精益生产，成本达到行业领先",
+						"成本领先",
+						"追求卓越",
+						"最大限度降低企业管理和运营成本"
+					]
+				},
+				{
+					"title": "全面成本管理的核心（  ）",
+					"answer": 1,
+					"question": [
+						"就是把成本降到尽可能低的水平加以保持",
+						"就是控制不必要、不合理成本因素",
+						"就是全面、系统、充分和准确地识别和确定提高成本因素",
+						"就是认识、理解、掌握和运用好提高成本因素的性质"
+					]
+				},
+				{
+					"title": "降低和保持成本的核心（  ）",
+					"answer": 2,
+					"question": [
+						"就是把成本降到尽可能低的水平加以保持",
+						"就是控制不必要、不合理成本因素",
+						"就是全面、系统、充分和准确地识别和确定提高成本因素",
+						"就是认识、理解、掌握和运用好提高成本因素的性质"
+					]
+				}
+			]
+		},
+		"part1": {
+			"name": "QC知识",
+			"data": [
+				{
+					"title": "本次成本月活动主题是（  ）",
+					"answer": 3,
+					"question": [
+						"全员降本增效，促进管理提升",
+						"优化成本管理，加快内涵发展",
+						"加强&quot;三全&quot;成本管理，促进公司转型发展",
+						"增强成本意识，同创企业效益。"
+					]
+				},
+				{
+					"title": "成钞公司的成本方针是（  ）",
+					"answer": 1,
+					"question": [
+						"全员、全过程、全要素",
+						"优化成本、创造价值",
+						"内涵式发展、成本行业领先",
+						"控制成本、降本增效"
+					]
+				},
+				{
+					"title": "成钞公司的成本理念（  ）",
+					"answer": 3,
+					"question": [
+						"优化成本管理，加快内涵发展",
+						"全员降本增效，促进管理提升",
+						"优化成本，创造价值",
+						"全员参与，降本增效"
+					]
+				},
+				{
+					"title": "成钞公司的成本战略（  ）",
+					"answer": 2,
+					"question": [
+						"精益生产，成本达到行业领先",
+						"成本领先",
+						"追求卓越",
+						"最大限度降低企业管理和运营成本"
+					]
+				},
+				{
+					"title": "全面成本管理的核心（  ）",
+					"answer": 1,
+					"question": [
+						"就是把成本降到尽可能低的水平加以保持",
+						"就是控制不必要、不合理成本因素",
+						"就是全面、系统、充分和准确地识别和确定提高成本因素",
+						"就是认识、理解、掌握和运用好提高成本因素的性质"
+					]
+				},
+				{
+					"title": "降低和保持成本的核心（  ）",
+					"answer": 2,
+					"question": [
+						"就是把成本降到尽可能低的水平加以保持",
+						"就是控制不必要、不合理成本因素",
+						"就是全面、系统、充分和准确地识别和确定提高成本因素",
+						"就是认识、理解、掌握和运用好提高成本因素的性质"
+					]
+				}
+			]
+		},
+		"part2": {
+			"name": "人民币防伪",
+			"data": [
+				{
+					"title": "本次成本月活动主题是（  ）",
+					"answer": 3,
+					"question": [
+						"全员降本增效，促进管理提升",
+						"优化成本管理，加快内涵发展",
+						"加强&quot;三全&quot;成本管理，促进公司转型发展",
+						"增强成本意识，同创企业效益。"
+					]
+				},
+				{
+					"title": "成钞公司的成本方针是（  ）",
+					"answer": 1,
+					"question": [
+						"全员、全过程、全要素",
+						"优化成本、创造价值",
+						"内涵式发展、成本行业领先",
+						"控制成本、降本增效"
+					]
+				},
+				{
+					"title": "成钞公司的成本理念（  ）",
+					"answer": 3,
+					"question": [
+						"优化成本管理，加快内涵发展",
+						"全员降本增效，促进管理提升",
+						"优化成本，创造价值",
+						"全员参与，降本增效"
+					]
+				},
+				{
+					"title": "成钞公司的成本战略（  ）",
+					"answer": 2,
+					"question": [
+						"精益生产，成本达到行业领先",
+						"成本领先",
+						"追求卓越",
+						"最大限度降低企业管理和运营成本"
+					]
+				},
+				{
+					"title": "全面成本管理的核心（  ）",
+					"answer": 1,
+					"question": [
+						"就是把成本降到尽可能低的水平加以保持",
+						"就是控制不必要、不合理成本因素",
+						"就是全面、系统、充分和准确地识别和确定提高成本因素",
+						"就是认识、理解、掌握和运用好提高成本因素的性质"
+					]
+				},
+				{
+					"title": "降低和保持成本的核心（  ）",
+					"answer": 2,
+					"question": [
+						"就是把成本降到尽可能低的水平加以保持",
+						"就是控制不必要、不合理成本因素",
+						"就是全面、系统、充分和准确地识别和确定提高成本因素",
+						"就是认识、理解、掌握和运用好提高成本因素的性质"
+					]
+				}
+			]
+		}
 	};
 
 /***/ },
@@ -3633,7 +3642,8 @@
 		secColor: [],
 		debug: false, //无网络测试模式
 		titleNumPerPart: 5, // 每关题目数量
-		part: 3 //答题关数
+		part: 3, //答题关数
+		lastAnswerTime: 0
 	};
 
 	module.exports = exam;
@@ -16805,6 +16815,7 @@
 	__webpack_require__(5);
 	__webpack_require__(25);
 	__webpack_require__(12);
+
 	function initDom() {
 		//此处设置一个较长数值，数据载入完毕后再显示
 		$("#fakeLoader").fakeLoader({
@@ -16827,7 +16838,7 @@
 		exam.examPaper = PAPER[sid];
 		document.title = WINDOWTITLE[sid];
 	}
-		
+
 	var app = function() {
 		var rendPaper = function() {
 
@@ -16865,20 +16876,17 @@
 			}
 		};
 
-		function getPaper() {
-			var question = __webpack_require__(47)("./"+exam.examPaper+'.json');
-			var quesLen = question.length;
+		function getNormalErrPaper(question, errorList) {
 
 			//只抽取maxAnswerNum个
-			quesLen = (quesLen >= exam.maxAnswerNum) ? quesLen : exam.maxAnswerNum;
-			exam.maxAnswerNum = quesLen;
+			exam.maxAnswerNum = Math.max(question.length, exam.maxAnswerNum);
 
 			//我的错题
 			var str = '';
 			if (uid == -1) { //显示所有题库
 				//question.length
 				//管3答题 显示前200道
-				for (i = 0; i < 200; i++) {
+				for (i = 0; i < exam.maxAnswerNum; i++) {
 					//console.log(question[exam.myError[i]]);
 					if (!util.isPaperHide(i)) {
 						$('#fullpage').append(util.getExamTemplateByObj(question[i], 0, i + 1));
@@ -16895,25 +16903,41 @@
 				$('.answer-num').parent().append(str);
 
 			} else {
-				for (i = 0; i < exam.myErrNums; i++) {
+				var len = errorList.length;
+				for (i = 0; i < len; i++) {
 					//console.log(question[exam.myError[i]]);
-					if (typeof question[exam.myError[i]] != 'undefined') {
-						$('#fullpage').append(util.getExamTemplateByObj(question[exam.myError[i]], 0, i + 1));
+					if (typeof question[errorList[i]] != 'undefined') {
+						$('#fullpage').append(util.getExamTemplateByObj(question[errorList[i]], 0, i + 1));
 					}
+				}
+			}
+		}
+
+		function getPaper() {
+			var question = __webpack_require__(47)("./" + exam.examPaper + '.json');
+			//普通答题，直接载入即可
+			if (exam.type == '0') {
+				getNormalErrPaper(question, exam.myError);
+			} else {
+				//过关类型，需按关卡分别载入数据
+				var err = exam.myError;
+				for (var key in err) {
+					var id = parseInt(key, 10);
+					getNormalErrPaper(question['part' + id].data, err[key]);
 				}
 			}
 
 			//间隔背景
 			exam.lastPage = exam.myErrNums;
-			for (i = 0; i < exam.lastPage; i++) {
-				exam.secColor[i] = (i % 2) ? '#fff' : '#445';
-			}
+			// for (i = 0; i < exam.lastPage; i++) {
+			// 	exam.secColor[i] = (i % 2) ? '#fff' : '#445';
+			// }
 
 			document.getElementById('autoplay').play();
 			rendPaper();
 		}
-		
-		function initApp(){			
+
+		function initApp() {
 			if (uid == -1) {
 				getPaper();
 			} else {
@@ -16932,19 +16956,22 @@
 						$('[name="userscore"]').text('获得了' + obj.score + '分。');
 					}
 
-					exam.myErrNums = 200 - Number.parseInt(obj.score);
-
-					if (exam.myErrNums > 0) {
-						$('[name="errTips"]').text('做错' + exam.myErrNums + '道题,最终');
-						$('[name="myErrTips"]').text('接下来我们来看看这' + exam.myErrNums + '道题目的正确答案。');
-						exam.myError = obj.errors.split(',');
-						exam.myErrNums = exam.myError.length;
+					if (obj.sportType == '1') {
+						exam.myError = JSON.parse(obj.errors);
+					} else {
+						exam.myErrNums = 100 - Number.parseInt(obj.score);
+						if (exam.myErrNums > 0) {
+							$('[name="errTips"]').text('做错' + exam.myErrNums + '道题,最终');
+							$('[name="myErrTips"]').text('接下来我们来看看这' + exam.myErrNums + '道题目的正确答案。');
+							exam.myError = obj.errors.split(',');
+							exam.myErrNums = exam.myError.length;
+						}
 					}
 					getPaper();
 				});
 			}
 		}
-		
+
 		$('#fullpage').on('click', '[name="hidethis"]', function() {
 			/* Act on the event */
 			//载入数据
@@ -16968,9 +16995,9 @@
 			localStorage.removeItem(key);
 			window.location.href = window.location.href;
 		});
-		
+
 		return {
-			init: function() {			
+			init: function() {
 				initApp();
 			}
 		};

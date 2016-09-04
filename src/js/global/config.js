@@ -40,7 +40,8 @@ var exam = {
 	secColor: [],
 	debug: false, //无网络测试模式
 	titleNumPerPart: 5, // 每关题目数量
-	part: 3 //答题关数
+	part: 3, //答题关数
+	lastAnswerTime: 0
 };
 
 module.exports = exam;

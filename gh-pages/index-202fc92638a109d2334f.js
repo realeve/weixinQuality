@@ -3397,192 +3397,201 @@
 /***/ function(module, exports) {
 
 	module.exports = {
-		"part1": [
-			{
-				"title": "本次成本月活动主题是（  ）",
-				"answer": 3,
-				"question": [
-					"全员降本增效，促进管理提升",
-					"优化成本管理，加快内涵发展",
-					"加强&quot;三全&quot;成本管理，促进公司转型发展",
-					"增强成本意识，同创企业效益。"
-				]
-			},
-			{
-				"title": "成钞公司的成本方针是（  ）",
-				"answer": 1,
-				"question": [
-					"全员、全过程、全要素",
-					"优化成本、创造价值",
-					"内涵式发展、成本行业领先",
-					"控制成本、降本增效"
-				]
-			},
-			{
-				"title": "成钞公司的成本理念（  ）",
-				"answer": 3,
-				"question": [
-					"优化成本管理，加快内涵发展",
-					"全员降本增效，促进管理提升",
-					"优化成本，创造价值",
-					"全员参与，降本增效"
-				]
-			},
-			{
-				"title": "成钞公司的成本战略（  ）",
-				"answer": 2,
-				"question": [
-					"精益生产，成本达到行业领先",
-					"成本领先",
-					"追求卓越",
-					"最大限度降低企业管理和运营成本"
-				]
-			},
-			{
-				"title": "全面成本管理的核心（  ）",
-				"answer": 1,
-				"question": [
-					"就是把成本降到尽可能低的水平加以保持",
-					"就是控制不必要、不合理成本因素",
-					"就是全面、系统、充分和准确地识别和确定提高成本因素",
-					"就是认识、理解、掌握和运用好提高成本因素的性质"
-				]
-			},
-			{
-				"title": "降低和保持成本的核心（  ）",
-				"answer": 2,
-				"question": [
-					"就是把成本降到尽可能低的水平加以保持",
-					"就是控制不必要、不合理成本因素",
-					"就是全面、系统、充分和准确地识别和确定提高成本因素",
-					"就是认识、理解、掌握和运用好提高成本因素的性质"
-				]
-			}
-		],
-		"part2": [
-			{
-				"title": "本次成本月活动主题是（  ）",
-				"answer": 3,
-				"question": [
-					"全员降本增效，促进管理提升",
-					"优化成本管理，加快内涵发展",
-					"加强&quot;三全&quot;成本管理，促进公司转型发展",
-					"增强成本意识，同创企业效益。"
-				]
-			},
-			{
-				"title": "成钞公司的成本方针是（  ）",
-				"answer": 1,
-				"question": [
-					"全员、全过程、全要素",
-					"优化成本、创造价值",
-					"内涵式发展、成本行业领先",
-					"控制成本、降本增效"
-				]
-			},
-			{
-				"title": "成钞公司的成本理念（  ）",
-				"answer": 3,
-				"question": [
-					"优化成本管理，加快内涵发展",
-					"全员降本增效，促进管理提升",
-					"优化成本，创造价值",
-					"全员参与，降本增效"
-				]
-			},
-			{
-				"title": "成钞公司的成本战略（  ）",
-				"answer": 2,
-				"question": [
-					"精益生产，成本达到行业领先",
-					"成本领先",
-					"追求卓越",
-					"最大限度降低企业管理和运营成本"
-				]
-			},
-			{
-				"title": "全面成本管理的核心（  ）",
-				"answer": 1,
-				"question": [
-					"就是把成本降到尽可能低的水平加以保持",
-					"就是控制不必要、不合理成本因素",
-					"就是全面、系统、充分和准确地识别和确定提高成本因素",
-					"就是认识、理解、掌握和运用好提高成本因素的性质"
-				]
-			},
-			{
-				"title": "降低和保持成本的核心（  ）",
-				"answer": 2,
-				"question": [
-					"就是把成本降到尽可能低的水平加以保持",
-					"就是控制不必要、不合理成本因素",
-					"就是全面、系统、充分和准确地识别和确定提高成本因素",
-					"就是认识、理解、掌握和运用好提高成本因素的性质"
-				]
-			}
-		],
-		"part3": [
-			{
-				"title": "本次成本月活动主题是（  ）",
-				"answer": 3,
-				"question": [
-					"全员降本增效，促进管理提升",
-					"优化成本管理，加快内涵发展",
-					"加强&quot;三全&quot;成本管理，促进公司转型发展",
-					"增强成本意识，同创企业效益。"
-				]
-			},
-			{
-				"title": "成钞公司的成本方针是（  ）",
-				"answer": 1,
-				"question": [
-					"全员、全过程、全要素",
-					"优化成本、创造价值",
-					"内涵式发展、成本行业领先",
-					"控制成本、降本增效"
-				]
-			},
-			{
-				"title": "成钞公司的成本理念（  ）",
-				"answer": 3,
-				"question": [
-					"优化成本管理，加快内涵发展",
-					"全员降本增效，促进管理提升",
-					"优化成本，创造价值",
-					"全员参与，降本增效"
-				]
-			},
-			{
-				"title": "成钞公司的成本战略（  ）",
-				"answer": 2,
-				"question": [
-					"精益生产，成本达到行业领先",
-					"成本领先",
-					"追求卓越",
-					"最大限度降低企业管理和运营成本"
-				]
-			},
-			{
-				"title": "全面成本管理的核心（  ）",
-				"answer": 1,
-				"question": [
-					"就是把成本降到尽可能低的水平加以保持",
-					"就是控制不必要、不合理成本因素",
-					"就是全面、系统、充分和准确地识别和确定提高成本因素",
-					"就是认识、理解、掌握和运用好提高成本因素的性质"
-				]
-			},
-			{
-				"title": "降低和保持成本的核心（  ）",
-				"answer": 2,
-				"question": [
-					"就是把成本降到尽可能低的水平加以保持",
-					"就是控制不必要、不合理成本因素",
-					"就是全面、系统、充分和准确地识别和确定提高成本因素",
-					"就是认识、理解、掌握和运用好提高成本因素的性质"
-				]
-			}
-		]
+		"part0": {
+			"name": "基础知识",
+			"data": [
+				{
+					"title": "本次成本月活动主题是（  ）",
+					"answer": 3,
+					"question": [
+						"全员降本增效，促进管理提升",
+						"优化成本管理，加快内涵发展",
+						"加强&quot;三全&quot;成本管理，促进公司转型发展",
+						"增强成本意识，同创企业效益。"
+					]
+				},
+				{
+					"title": "成钞公司的成本方针是（  ）",
+					"answer": 1,
+					"question": [
+						"全员、全过程、全要素",
+						"优化成本、创造价值",
+						"内涵式发展、成本行业领先",
+						"控制成本、降本增效"
+					]
+				},
+				{
+					"title": "成钞公司的成本理念（  ）",
+					"answer": 3,
+					"question": [
+						"优化成本管理，加快内涵发展",
+						"全员降本增效，促进管理提升",
+						"优化成本，创造价值",
+						"全员参与，降本增效"
+					]
+				},
+				{
+					"title": "成钞公司的成本战略（  ）",
+					"answer": 2,
+					"question": [
+						"精益生产，成本达到行业领先",
+						"成本领先",
+						"追求卓越",
+						"最大限度降低企业管理和运营成本"
+					]
+				},
+				{
+					"title": "全面成本管理的核心（  ）",
+					"answer": 1,
+					"question": [
+						"就是把成本降到尽可能低的水平加以保持",
+						"就是控制不必要、不合理成本因素",
+						"就是全面、系统、充分和准确地识别和确定提高成本因素",
+						"就是认识、理解、掌握和运用好提高成本因素的性质"
+					]
+				},
+				{
+					"title": "降低和保持成本的核心（  ）",
+					"answer": 2,
+					"question": [
+						"就是把成本降到尽可能低的水平加以保持",
+						"就是控制不必要、不合理成本因素",
+						"就是全面、系统、充分和准确地识别和确定提高成本因素",
+						"就是认识、理解、掌握和运用好提高成本因素的性质"
+					]
+				}
+			]
+		},
+		"part1": {
+			"name": "QC知识",
+			"data": [
+				{
+					"title": "本次成本月活动主题是（  ）",
+					"answer": 3,
+					"question": [
+						"全员降本增效，促进管理提升",
+						"优化成本管理，加快内涵发展",
+						"加强&quot;三全&quot;成本管理，促进公司转型发展",
+						"增强成本意识，同创企业效益。"
+					]
+				},
+				{
+					"title": "成钞公司的成本方针是（  ）",
+					"answer": 1,
+					"question": [
+						"全员、全过程、全要素",
+						"优化成本、创造价值",
+						"内涵式发展、成本行业领先",
+						"控制成本、降本增效"
+					]
+				},
+				{
+					"title": "成钞公司的成本理念（  ）",
+					"answer": 3,
+					"question": [
+						"优化成本管理，加快内涵发展",
+						"全员降本增效，促进管理提升",
+						"优化成本，创造价值",
+						"全员参与，降本增效"
+					]
+				},
+				{
+					"title": "成钞公司的成本战略（  ）",
+					"answer": 2,
+					"question": [
+						"精益生产，成本达到行业领先",
+						"成本领先",
+						"追求卓越",
+						"最大限度降低企业管理和运营成本"
+					]
+				},
+				{
+					"title": "全面成本管理的核心（  ）",
+					"answer": 1,
+					"question": [
+						"就是把成本降到尽可能低的水平加以保持",
+						"就是控制不必要、不合理成本因素",
+						"就是全面、系统、充分和准确地识别和确定提高成本因素",
+						"就是认识、理解、掌握和运用好提高成本因素的性质"
+					]
+				},
+				{
+					"title": "降低和保持成本的核心（  ）",
+					"answer": 2,
+					"question": [
+						"就是把成本降到尽可能低的水平加以保持",
+						"就是控制不必要、不合理成本因素",
+						"就是全面、系统、充分和准确地识别和确定提高成本因素",
+						"就是认识、理解、掌握和运用好提高成本因素的性质"
+					]
+				}
+			]
+		},
+		"part2": {
+			"name": "人民币防伪",
+			"data": [
+				{
+					"title": "本次成本月活动主题是（  ）",
+					"answer": 3,
+					"question": [
+						"全员降本增效，促进管理提升",
+						"优化成本管理，加快内涵发展",
+						"加强&quot;三全&quot;成本管理，促进公司转型发展",
+						"增强成本意识，同创企业效益。"
+					]
+				},
+				{
+					"title": "成钞公司的成本方针是（  ）",
+					"answer": 1,
+					"question": [
+						"全员、全过程、全要素",
+						"优化成本、创造价值",
+						"内涵式发展、成本行业领先",
+						"控制成本、降本增效"
+					]
+				},
+				{
+					"title": "成钞公司的成本理念（  ）",
+					"answer": 3,
+					"question": [
+						"优化成本管理，加快内涵发展",
+						"全员降本增效，促进管理提升",
+						"优化成本，创造价值",
+						"全员参与，降本增效"
+					]
+				},
+				{
+					"title": "成钞公司的成本战略（  ）",
+					"answer": 2,
+					"question": [
+						"精益生产，成本达到行业领先",
+						"成本领先",
+						"追求卓越",
+						"最大限度降低企业管理和运营成本"
+					]
+				},
+				{
+					"title": "全面成本管理的核心（  ）",
+					"answer": 1,
+					"question": [
+						"就是把成本降到尽可能低的水平加以保持",
+						"就是控制不必要、不合理成本因素",
+						"就是全面、系统、充分和准确地识别和确定提高成本因素",
+						"就是认识、理解、掌握和运用好提高成本因素的性质"
+					]
+				},
+				{
+					"title": "降低和保持成本的核心（  ）",
+					"answer": 2,
+					"question": [
+						"就是把成本降到尽可能低的水平加以保持",
+						"就是控制不必要、不合理成本因素",
+						"就是全面、系统、充分和准确地识别和确定提高成本因素",
+						"就是认识、理解、掌握和运用好提高成本因素的性质"
+					]
+				}
+			]
+		}
 	};
 
 /***/ },
@@ -3713,7 +3722,8 @@
 		secColor: [],
 		debug: false, //无网络测试模式
 		titleNumPerPart: 5, // 每关题目数量
-		part: 3 //答题关数
+		part: 3, //答题关数
+		lastAnswerTime: 0
 	};
 
 	module.exports = exam;
@@ -10173,6 +10183,13 @@
 		return sr.substring(sr.length - rightn, sr.length);
 	}
 
+	function getUrlParam(name) {
+		var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+		var r = encodeURI(window.location.search).substr(1).match(reg); //匹配目标参数
+		if (r !== null) return decodeURI(r[2]);
+		return -1; //返回参数值
+	}
+
 	//数组随机排序
 	function randomsort(a, b) {
 		return Math.random() > 0.5 ? -1 : 1;
@@ -10218,7 +10235,7 @@
 		$('[name="sucessInfo"] .weui_msg_title').text(tipStr).show();
 	}
 
-	function submitPaper(data, exam) {
+	function submitPaper(data, exam, isNotPassed,errNums) {
 		$.ajax({
 				url: '//cbpc540.applinzi.com/index.php?s=/addon/GoodVoice/GoodVoice/setSafeExamData',
 				data: data,
@@ -10257,6 +10274,19 @@
 			})
 			.always(function() {
 				exam.isSubmit = true;
+				//错的数量大于1
+				if (isNotPassed) {					
+					$.alert("本关做错" + errNums + "题,本次答题结束！", "警告!", function() {
+						exam.timeReleased = true;
+						$.fn.fullpage.moveTo(0, exam.lastPage);
+					});
+				} else {
+					console.log(data.answer_nums);
+					setTimeout(function() {
+						$.fn.fullpage.moveTo(0, data.answer_nums + 3 +  Math.ceil((data.answer_nums+1) / 5));
+					}, 300);
+				}
+
 				//隐藏提交按钮，防止二次提交数据
 				if (!exam.realMatch) {
 					$('#submit').hide();
@@ -10352,10 +10382,12 @@
 		//得分清零
 		exam.total = 0;
 		//计算关卡
-		var order;
-
-		answerNums = Math.min((answerNums + 1), exam.maxAnswerNum);
-
+		answerNums = $('.slide.active .weui_cells_checkbox').data('id');
+		
+		var order = Math.ceil((answerNums+1)/exam.titleNumPerPart);
+	
+		var needCheck = ((answerNums + 1) % exam.titleNumPerPart) === 0;
+		
 		exam.answerList.map(function(scores, i) {
 			exam.total += scores;
 			order = Math.floor(i / exam.titleNumPerPart);
@@ -10368,7 +10400,9 @@
 				exam.error[order].push(exam.sourceList[order][i % exam.titleNumPerPart]);
 			}
 		});
-
+		
+		var isNotPassed = needCheck && exam.error[order].length > 1;
+		var errNums = exam.error[order].length;
 		//是否所有题目均答完
 		if (bCheck && !isAllQuestionAnswered(exam)) {
 			if (!exam.realMatch) {
@@ -10395,9 +10429,11 @@
 			oldScore: exam.loginData.oldScore,
 			sportid: exam.sportid,
 			bCheck: bCheck,
-			answer_nums: answerNums //当前答题数量
+			answer_nums: answerNums++, //当前答题数量
+			sportType: exam.type
 		};
 		//中途提交，次数增1
+		
 		if (!bCheck && data.answer_nums < exam.maxAnswerNum) {
 			data.iTimes = 2;
 		}
@@ -10410,7 +10446,7 @@
 					text: "交卷",
 					onClick: function() {
 						exam.isSubmit = true;
-						submitPaper(data, exam);
+						submitPaper(data, exam, isNotPassed,errNums);
 					}
 				}, {
 					text: "检查一遍",
@@ -10420,10 +10456,15 @@
 				}]
 			});
 		} else {
+			
 			exam.isSubmit = true;
-			submitPaper(data, exam);
+			submitPaper(data, exam, isNotPassed,errNums);
 		}
 		return exam;
+	}
+
+	function getTimeStamp() {
+		return new Date().getTime();
 	}
 
 	module.exports = {
@@ -10462,10 +10503,14 @@
 					return;
 				}
 
-				if (direction == 'right' && !exam.timeReleased && idx > 0 && idx < exam.lastPage - 2 && !exam.isAnswered[idx - 1]) {
-					$.alert("第" + idx + "题您还没有作答！", "警告！", function() {
-						$.fn.fullpage.moveTo(0, index);
-					});
+				if (direction == 'right' && !exam.timeReleased && idx > 0 && idx < exam.lastPage - 2 && $('.slide.active').find('.weui_cell_hd').length) {
+					var curID = $('.slide.active .weui_cells_checkbox').data('id');
+
+					if (!exam.isAnswered[curID]) {
+						$.alert("第" + (curID + 1) + "题您还没有作答！", "警告！", function() {
+							$.fn.fullpage.moveTo(0, index);
+						});
+					}
 				}
 			}
 
@@ -10486,7 +10531,7 @@
 		},
 		handleTotalScore: handleTotalScore,
 		today: today,
-		getExamTemplate: function(data, i, pNum) {
+		getExamTemplate: function(data, i, pNum, titleNumPerPart) {
 			var ques = [];
 			var arr = [];
 			//选项乱序
@@ -10496,15 +10541,15 @@
 				oldOrder[arrData] = id;
 			});
 			var str = '<div class="slide">' +
-				'<h1 class="answer-num title-hor blue-font">第<span>' + i + '</span>题</h1>' +
+				'<h1 class="answer-num title-hor blue-font">第<span>' + (i + 1) + '</span>题</h1>' +
 				'<div class="weui_cells_title blue-font" style="margin-top:-5px;line-height:1.2;">' + data.title + '</div>' +
-				'<div class="weui_cells weui_cells_checkbox weui_cells_dark weui_cells_dark_myerr blue-font" data-id=' + (i - 6 + pNum * 5) + ' data-order=' + (pNum - 1) + ' data-answer=' + (oldOrder[data.answer - 1] + 1) + '>';
+				'<div class="weui_cells weui_cells_checkbox weui_cells_dark weui_cells_dark_myerr blue-font" data-id=' + (i + pNum * titleNumPerPart) + ' data-order=' + pNum + ' data-answer=' + (oldOrder[data.answer - 1] + 1) + '>';
 
 			data.question.map(function(qTitle, idx) {
 				ques[idx] = '';
 				ques[idx] += '    <label class="weui_cell weui_check_label" style="padding-top:5px;padding-bottom:5px;">' +
 					'<div class="weui_cell_hd">' +
-					'    <input type="radio" class="weui_check" name="radio' + (i - 1) + '">' +
+					'    <input type="radio" class="weui_check" name="radio' + i + '">' +
 					'    <i class="weui_icon_checked"></i>' +
 					'</div>' +
 					'<div class="weui_cell_bd weui_cell_primary" data-value=' + oldOrder[idx] + '>' +
@@ -10524,6 +10569,7 @@
 		getRandomArr: getRandomArr,
 		isAllQuestionAnswered: isAllQuestionAnswered,
 		submitData: submitData,
+		getTimeStamp: getTimeStamp,
 		handleTouchEvent: function(exam, obj) {
 			var answerPrnt = obj.parents('.weui_cells');
 			var answerInfo = obj.parent().find('.weui_cell_primary');
@@ -10531,11 +10577,13 @@
 			var curID = answerPrnt.data('id');
 			var order = answerPrnt.data('order');
 
-			if (exam.isAnswered[curID]) {
-				return;
+			var needCheck = ((curID + 1) % exam.titleNumPerPart) === 0;
+
+			//两次答题小于300ms认为是组件触发两次答题
+			if (needCheck || getTimeStamp() - exam.lastAnswerTime < 100) {
+				return exam;
 			}
 
-			var needCheck = ((curID + 1) % 5) === 0;
 
 			//增加此条件将存在修改答案后分数不变的BUG
 			//if (!exam.isAnswered[curID])
@@ -10543,31 +10591,24 @@
 				exam.answerList[curID] = curScore;
 				exam.isAnswered[curID] = 1;
 				exam.curID = curID;
-
+				console.log(needCheck);
 				if (exam.timeReleased) {
 					timeReleasedTip(exam.lastPage);
 				} else {
 
 					//未到每关最后一题 //未到最后一题
-					if (curID <= exam.maxAnswerNum - 1) {
+					//if (curID <= exam.maxAnswerNum - 1) {
 						//如果当前答对，并且在实时比赛模式才提交分数
 						if ( /*curScore && */ exam.realMatch) {
 							//直接提交当前数据，不需审核
 							exam = submitData(false, curID, exam);
-							var errNums = exam.error[order].length;
-							if (needCheck && errNums > 1) {
-								$.alert("本关做错" + errNums + "题,本次答题结束！", "警告!", function() {
-									$.fn.fullpage.moveTo(0, lastPage - 2);
-								});
-							}
 						}
-
-						if (!needCheck) {
-							setTimeout(function() {
-								$.fn.fullpage.moveTo(0, curID + 4 + order);
-							}, 300);
-						}
-					}
+						// if (!needCheck) {
+						// 	setTimeout(function() {
+						// 		$.fn.fullpage.moveTo(0, curID + 4 + order);
+						// 	}, 300);
+						// }
+					//}
 				}
 			}
 
@@ -10664,7 +10705,8 @@
 				}
 			}
 			return exam;
-		}
+		},
+		getUrlParam: getUrlParam
 	};
 
 /***/ },
@@ -10714,7 +10756,10 @@
 	initDom();
 
 	var util = __webpack_require__(51);
-
+	exam.type = util.getUrlParam('type');
+	if (exam.type === null) {
+		exam.type = 0;
+	}
 	var app = function() {
 
 		var renderPaper = function() {
@@ -10751,7 +10796,9 @@
 		};
 
 		function getPaper() {
+
 			var questionList = __webpack_require__(21);
+
 			var quesLen = 0;
 			exam.lastPage = 0;
 			var question;
@@ -10759,36 +10806,38 @@
 			var strNext = '<div class="weui_opr_area"><p class="weui_btn_area"><a href="javascript:;" class="weui_btn weui_btn_primary weui_btn_primary_yellow"';
 			var strTips;
 
-			for (var pNum = 1; pNum <= exam.part; pNum++) {
-				strTips = '<div class="slide center">' +
-					'<div name="fixed" style="margin:0 auto;position:absolute;top:20%;">' +
-					'<h1 class="white-font headerTitle" style="line-height: 1.4em;font-size:3em;">第' + pNum + '关</h1>' +
-					'<article class="weui_article white-font" style="padding-top: 40px;line-height: .5em;color:#eee;">' +
-					'<p style="font-size:2.5em;">基础知识</p>' +
-					'</article>' +
-					'</div>' +
-					'<img src="./welcome2.jpg" class="background_welcome" style="height:100%;width:100%;display:block;margin:0 auto;"/>' +
-					'</div>';
+			for (var pNum = 0; pNum < exam.part; pNum++) {
+				if (exam.type == 1) {
+					question = questionList['part' + pNum].data;
+					strTips = '<div class="slide center">' +
+						'<div name="fixed" style="margin:0 auto;position:absolute;top:20%;">' +
+						'<h1 class="white-font headerTitle" style="line-height: 1.4em;font-size:3em;">第' + (pNum + 1) + '关</h1>' +
+						'<article class="weui_article white-font" style="padding-top: 40px;line-height: .5em;color:#eee;">' +
+						'<p style="font-size:2.5em;">' + questionList['part' + pNum].name + '</p>' +
+						'</article>' +
+						'</div>' +
+						'<img src="./welcome2.jpg" class="background_welcome" style="height:100%;width:100%;display:block;margin:0 auto;"/>' +
+						'</div>';
+					$('[name="sucessInfo"]').before(strTips);
+				} else {
+					question = questionList;
+				}
 
-				question = questionList['part' + pNum];
-				$('[name="sucessInfo"]').before(strTips);
 				//管三活动，仅前200道题目参与问答
-				exam.sourceList[pNum - 1] = util.getRandomArr(question.length);
+				exam.sourceList[pNum] = util.getRandomArr(question.length);
 				titleNumPerPart = Math.min(question.length, exam.titleNumPerPart);
 				quesLen += titleNumPerPart;
 
 				for (var i = 0; i < titleNumPerPart; i++) {
-					$('[name="sucessInfo"]').before(util.getExamTemplate(question[exam.sourceList[pNum - 1][i]], i + 1, pNum));
+					$('[name="sucessInfo"]').before(util.getExamTemplate(question[exam.sourceList[pNum][i]], i, pNum, exam.titleNumPerPart));
 					exam.isAnswered[i] = 0;
 				}
-				var str = strNext + ((pNum == 3) ? ' id="submit">交卷</a></p></div>' : ' name="next">下一关</a></p></div>');
+				var str = strNext + ((pNum == exam.part - 1) ? ' id="submit">交卷</a></p></div>' : ' name="next">下一关</a></p></div>');
 				$('.answer-num').last().parent().append(str);
-
-
 			}
 
 			//间隔背景
-			exam.lastPage = quesLen + 3 + (pNum - 1);
+			exam.lastPage = quesLen + 2 + exam.part;
 			exam.maxAnswerNum = quesLen;
 			$('[name="nums"]').text(quesLen);
 
@@ -10801,7 +10850,7 @@
 
 
 			//横向页面，部分内容布局修正
-			$('[name="fixed"]').css('width', 100 / exam.lastPage + '%');
+			$('[name="fixed"]').css('width', 100 / (exam.lastPage + 1) + '%');
 
 			for (var i = 0; i < exam.lastPage; i++) {
 				exam.secColor[i] = (i % 2) ? '#fff' : '#445';
@@ -10816,7 +10865,10 @@
 			getPaper();
 
 			$('.weui_cell_bd,.weui_cell_hd').on('click', function() {
+
 				exam = util.handleTouchEvent(exam, $(this));
+
+				exam.lastAnswerTime = util.getTimeStamp();
 			});
 
 			$('.weui_msg').removeClass('hidden');
@@ -10829,7 +10881,7 @@
 				exam = util.getUserInfo(exam);
 			});
 
-			$('#submit').on('click', function() {
+			$('#submit,[name="next"]').on('click', function() {
 				exam = util.submitData(!exam.realMatch, exam.curID, exam);
 
 			});

@@ -39,7 +39,10 @@ function initDom() {
 initDom();
 
 var util = require('./exam/examFunc.js');
-
+exam.type = util.getUrlParam('type');
+if (exam.type === null) {
+	exam.type = 0;
+}
 var app = function() {
 
 	var renderPaper = function() {
@@ -76,7 +79,9 @@ var app = function() {
 	};
 
 	function getPaper() {
+
 		var questionList = require('./config/quality.json');
+
 		var quesLen = 0;
 		exam.lastPage = 0;
 		var question;
@@ -84,36 +89,38 @@ var app = function() {
 		var strNext = '<div class="weui_opr_area"><p class="weui_btn_area"><a href="javascript:;" class="weui_btn weui_btn_primary weui_btn_primary_yellow"';
 		var strTips;
 
-		for (var pNum = 1; pNum <= exam.part; pNum++) {
-			strTips = '<div class="slide center">' +
-				'<div name="fixed" style="margin:0 auto;position:absolute;top:20%;">' +
-				'<h1 class="white-font headerTitle" style="line-height: 1.4em;font-size:3em;">第' + pNum + '关</h1>' +
-				'<article class="weui_article white-font" style="padding-top: 40px;line-height: .5em;color:#eee;">' +
-				'<p style="font-size:2.5em;">基础知识</p>' +
-				'</article>' +
-				'</div>' +
-				'<img src="./welcome2.jpg" class="background_welcome" style="height:100%;width:100%;display:block;margin:0 auto;"/>' +
-				'</div>';
+		for (var pNum = 0; pNum < exam.part; pNum++) {
+			if (exam.type == 1) {
+				question = questionList['part' + pNum].data;
+				strTips = '<div class="slide center">' +
+					'<div name="fixed" style="margin:0 auto;position:absolute;top:20%;">' +
+					'<h1 class="white-font headerTitle" style="line-height: 1.4em;font-size:3em;">第' + (pNum + 1) + '关</h1>' +
+					'<article class="weui_article white-font" style="padding-top: 40px;line-height: .5em;color:#eee;">' +
+					'<p style="font-size:2.5em;">' + questionList['part' + pNum].name + '</p>' +
+					'</article>' +
+					'</div>' +
+					'<img src="./welcome2.jpg" class="background_welcome" style="height:100%;width:100%;display:block;margin:0 auto;"/>' +
+					'</div>';
+				$('[name="sucessInfo"]').before(strTips);
+			} else {
+				question = questionList;
+			}
 
-			question = questionList['part' + pNum];
-			$('[name="sucessInfo"]').before(strTips);
 			//管三活动，仅前200道题目参与问答
-			exam.sourceList[pNum - 1] = util.getRandomArr(question.length);
+			exam.sourceList[pNum] = util.getRandomArr(question.length);
 			titleNumPerPart = Math.min(question.length, exam.titleNumPerPart);
 			quesLen += titleNumPerPart;
 
 			for (var i = 0; i < titleNumPerPart; i++) {
-				$('[name="sucessInfo"]').before(util.getExamTemplate(question[exam.sourceList[pNum - 1][i]], i + 1, pNum));
+				$('[name="sucessInfo"]').before(util.getExamTemplate(question[exam.sourceList[pNum][i]], i, pNum, exam.titleNumPerPart));
 				exam.isAnswered[i] = 0;
 			}
-			var str = strNext + ((pNum == 3) ? ' id="submit">交卷</a></p></div>' : ' name="next">下一关</a></p></div>');
+			var str = strNext + ((pNum == exam.part - 1) ? ' id="submit">交卷</a></p></div>' : ' name="next">下一关</a></p></div>');
 			$('.answer-num').last().parent().append(str);
-
-
 		}
 
 		//间隔背景
-		exam.lastPage = quesLen + 3 + (pNum - 1);
+		exam.lastPage = quesLen + 2 + exam.part;
 		exam.maxAnswerNum = quesLen;
 		$('[name="nums"]').text(quesLen);
 
@@ -126,7 +133,7 @@ var app = function() {
 
 
 		//横向页面，部分内容布局修正
-		$('[name="fixed"]').css('width', 100 / exam.lastPage + '%');
+		$('[name="fixed"]').css('width', 100 / (exam.lastPage + 1) + '%');
 
 		for (var i = 0; i < exam.lastPage; i++) {
 			exam.secColor[i] = (i % 2) ? '#fff' : '#445';
@@ -141,7 +148,10 @@ var app = function() {
 		getPaper();
 
 		$('.weui_cell_bd,.weui_cell_hd').on('click', function() {
+
 			exam = util.handleTouchEvent(exam, $(this));
+
+			exam.lastAnswerTime = util.getTimeStamp();
 		});
 
 		$('.weui_msg').removeClass('hidden');
@@ -154,9 +164,8 @@ var app = function() {
 			exam = util.getUserInfo(exam);
 		});
 
-		$('#submit').on('click', function() {
+		$('#submit,[name="next"]').on('click', function() {
 			exam = util.submitData(!exam.realMatch, exam.curID, exam);
-
 		});
 
 	}

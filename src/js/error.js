@@ -2,6 +2,7 @@
 require('./vendors/jquery.fullPage.js');
 require('./vendors/jquery-weui.js');
 require('./vendors/fakeLoader.js/fakeLoader.js');
+
 function initDom() {
 	//此处设置一个较长数值，数据载入完毕后再显示
 	$("#fakeLoader").fakeLoader({
@@ -24,7 +25,7 @@ if (sid != null) {
 	exam.examPaper = PAPER[sid];
 	document.title = WINDOWTITLE[sid];
 }
-	
+
 var app = function() {
 	var rendPaper = function() {
 
@@ -62,20 +63,17 @@ var app = function() {
 		}
 	};
 
-	function getPaper() {
-		var question = require('./config/'+exam.examPaper+'.json');
-		var quesLen = question.length;
+	function getNormalErrPaper(question, errorList) {
 
 		//只抽取maxAnswerNum个
-		quesLen = (quesLen >= exam.maxAnswerNum) ? quesLen : exam.maxAnswerNum;
-		exam.maxAnswerNum = quesLen;
+		exam.maxAnswerNum = Math.max(question.length, exam.maxAnswerNum);
 
 		//我的错题
 		var str = '';
 		if (uid == -1) { //显示所有题库
 			//question.length
 			//管3答题 显示前200道
-			for (i = 0; i < 200; i++) {
+			for (i = 0; i < exam.maxAnswerNum; i++) {
 				//console.log(question[exam.myError[i]]);
 				if (!util.isPaperHide(i)) {
 					$('#fullpage').append(util.getExamTemplateByObj(question[i], 0, i + 1));
@@ -92,25 +90,41 @@ var app = function() {
 			$('.answer-num').parent().append(str);
 
 		} else {
-			for (i = 0; i < exam.myErrNums; i++) {
+			var len = errorList.length;
+			for (i = 0; i < len; i++) {
 				//console.log(question[exam.myError[i]]);
-				if (typeof question[exam.myError[i]] != 'undefined') {
-					$('#fullpage').append(util.getExamTemplateByObj(question[exam.myError[i]], 0, i + 1));
+				if (typeof question[errorList[i]] != 'undefined') {
+					$('#fullpage').append(util.getExamTemplateByObj(question[errorList[i]], 0, i + 1));
 				}
+			}
+		}
+	}
+
+	function getPaper() {
+		var question = require('./config/' + exam.examPaper + '.json');
+		//普通答题，直接载入即可
+		if (exam.type == '0') {
+			getNormalErrPaper(question, exam.myError);
+		} else {
+			//过关类型，需按关卡分别载入数据
+			var err = exam.myError;
+			for (var key in err) {
+				var id = parseInt(key, 10);
+				getNormalErrPaper(question['part' + id].data, err[key]);
 			}
 		}
 
 		//间隔背景
 		exam.lastPage = exam.myErrNums;
-		for (i = 0; i < exam.lastPage; i++) {
-			exam.secColor[i] = (i % 2) ? '#fff' : '#445';
-		}
+		// for (i = 0; i < exam.lastPage; i++) {
+		// 	exam.secColor[i] = (i % 2) ? '#fff' : '#445';
+		// }
 
 		document.getElementById('autoplay').play();
 		rendPaper();
 	}
-	
-	function initApp(){			
+
+	function initApp() {
 		if (uid == -1) {
 			getPaper();
 		} else {
@@ -129,19 +143,22 @@ var app = function() {
 					$('[name="userscore"]').text('获得了' + obj.score + '分。');
 				}
 
-				exam.myErrNums = 200 - Number.parseInt(obj.score);
-
-				if (exam.myErrNums > 0) {
-					$('[name="errTips"]').text('做错' + exam.myErrNums + '道题,最终');
-					$('[name="myErrTips"]').text('接下来我们来看看这' + exam.myErrNums + '道题目的正确答案。');
-					exam.myError = obj.errors.split(',');
-					exam.myErrNums = exam.myError.length;
+				if (obj.sportType == '1') {
+					exam.myError = JSON.parse(obj.errors);
+				} else {
+					exam.myErrNums = 100 - Number.parseInt(obj.score);
+					if (exam.myErrNums > 0) {
+						$('[name="errTips"]').text('做错' + exam.myErrNums + '道题,最终');
+						$('[name="myErrTips"]').text('接下来我们来看看这' + exam.myErrNums + '道题目的正确答案。');
+						exam.myError = obj.errors.split(',');
+						exam.myErrNums = exam.myError.length;
+					}
 				}
 				getPaper();
 			});
 		}
 	}
-	
+
 	$('#fullpage').on('click', '[name="hidethis"]', function() {
 		/* Act on the event */
 		//载入数据
@@ -165,9 +182,9 @@ var app = function() {
 		localStorage.removeItem(key);
 		window.location.href = window.location.href;
 	});
-	
+
 	return {
-		init: function() {			
+		init: function() {
 			initApp();
 		}
 	};
