@@ -21,7 +21,7 @@ var exam = {
 	isAnswered: [], //题目回答状态
 	timeReleased: false, //时间用尽
 	isStarted: false, //活动是否开始
-	timeLength: 0, //启用时间限制 0为不限制
+	timeLength: 40 * 60 * 1000, //启用时间限制 0为不限制
 	sourceList: [], //原题目顺序
 	scoresPerAnswer: 0, //每道题目分数
 	isSubmit: false, //数据是否提交
@@ -40,7 +40,7 @@ var exam = {
 	secColor: [],
 	debug: false, //无网络测试模式
 	titleNumPerPart: 5, // 每关题目数量
-	part: 3, //答题关数
+	part: 9, //答题关数
 	lastAnswerTime: 0
 };
 

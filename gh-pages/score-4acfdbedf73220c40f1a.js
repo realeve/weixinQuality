@@ -48,9 +48,9 @@
 	var __SRC_DIR = "./src";
 	__webpack_require__(1)(__SRC_DIR+"/css/jquery.fullPage.css");
 	__webpack_require__(8)(__SRC_DIR+"/css/weui.css");
-	__webpack_require__(29)(__SRC_DIR+"/css/score.css");
+	__webpack_require__(30)(__SRC_DIR+"/css/score.css");
 	__webpack_require__(7)(__SRC_DIR+"/css/fakeLoader.css");
-	__webpack_require__(33)(__SRC_DIR+"/js/score.js");
+	__webpack_require__(34)(__SRC_DIR+"/js/score.js");
 	__webpack_require__(2)(__SRC_DIR+"/js/global/bgm.js");
 
 /***/ },
@@ -44009,7 +44009,8 @@
 /* 23 */,
 /* 24 */,
 /* 25 */,
-/* 26 */
+/* 26 */,
+/* 27 */
 /***/ function(module, exports) {
 
 	var gb = {
@@ -44037,13 +44038,13 @@
 	module.exports = gb;
 
 /***/ },
-/* 27 */,
 /* 28 */,
-/* 29 */
+/* 29 */,
+/* 30 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var map = {
-		"./src/css/score.css": 35
+		"./src/css/score.css": 47
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -44056,18 +44057,18 @@
 	};
 	webpackContext.resolve = webpackContextResolve;
 	module.exports = webpackContext;
-	webpackContext.id = 29;
+	webpackContext.id = 30;
 
 
 /***/ },
-/* 30 */,
 /* 31 */,
 /* 32 */,
-/* 33 */
+/* 33 */,
+/* 34 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var map = {
-		"./src/js/score.js": 59
+		"./src/js/score.js": 60
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -44080,17 +44081,11 @@
 	};
 	webpackContext.resolve = webpackContextResolve;
 	module.exports = webpackContext;
-	webpackContext.id = 33;
+	webpackContext.id = 34;
 
 
 /***/ },
-/* 34 */,
-/* 35 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
+/* 35 */,
 /* 36 */,
 /* 37 */,
 /* 38 */,
@@ -44102,12 +44097,18 @@
 /* 44 */,
 /* 45 */,
 /* 46 */,
-/* 47 */,
+/* 47 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
 /* 48 */,
-/* 49 */
+/* 49 */,
+/* 50 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var gb = __webpack_require__(26);
+	var gb = __webpack_require__(27);
 	var initOption = function() {
 		var option = {
 			color: ['rgba(255,255,255,0.6)'],
@@ -44201,22 +44202,22 @@
 	};
 
 /***/ },
-/* 50 */,
 /* 51 */,
-/* 52 */
+/* 52 */,
+/* 53 */
 /***/ function(module, exports) {
 
 	var SPORTNAME = ['安全月', '两学一做', '两学一做', '成本月', '成本月', '两学一做', '反假币', '质量月'];
 	module.exports = SPORTNAME;
 
 /***/ },
-/* 53 */,
 /* 54 */,
 /* 55 */,
 /* 56 */,
 /* 57 */,
 /* 58 */,
-/* 59 */
+/* 59 */,
+/* 60 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//公共资源
@@ -44226,9 +44227,9 @@
 	var echarts = __webpack_require__(13);
 
 	var SPORT = __webpack_require__(11);
-	var SPORTNAME = __webpack_require__(52);
-	var gb = __webpack_require__(26);
-	var util = __webpack_require__(49);
+	var SPORTNAME = __webpack_require__(53);
+	var gb = __webpack_require__(27);
+	var util = __webpack_require__(50);
 
 	var uid = util.getUrlParam('uid');
 	gb.sportid = util.getUrlParam('sid');

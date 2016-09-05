@@ -101,7 +101,8 @@ function submitPaper(data, exam, isNotPassed, errNums) {
 				});
 			} else {
 				setTimeout(function() {
-					$.fn.fullpage.moveTo(0, data.answer_nums + 3 + Math.ceil((data.answer_nums + 1) / 5));
+					//$.fn.fullpage.moveTo(0, data.answer_nums + 3 + Math.ceil((data.answer_nums + 1) / 5));
+					$.fn.fullpage.moveSlideRight();
 				}, 300);
 			}
 

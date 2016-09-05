@@ -48,7 +48,7 @@
 
 	var __SRC_DIR = "./src";
 	__webpack_require__(1)(__SRC_DIR+"/css/jquery.fullPage.css");
-	__webpack_require__(32)(__SRC_DIR+"/js/online.js");
+	__webpack_require__(33)(__SRC_DIR+"/js/online.js");
 	__webpack_require__(2)(__SRC_DIR+"/js/global/bgm.js");
 
 /***/ },
@@ -43795,7 +43795,7 @@
 
 /***/ },
 
-/***/ 27:
+/***/ 28:
 /***/ function(module, exports) {
 
 	function getUrlParam(name) {
@@ -43841,11 +43841,11 @@
 
 /***/ },
 
-/***/ 32:
+/***/ 33:
 /***/ function(module, exports, __webpack_require__) {
 
 	var map = {
-		"./src/js/online.js": 55
+		"./src/js/online.js": 56
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -43858,22 +43858,22 @@
 	};
 	webpackContext.resolve = webpackContextResolve;
 	module.exports = webpackContext;
-	webpackContext.id = 32;
+	webpackContext.id = 33;
 
 
 /***/ },
 
-/***/ 55:
+/***/ 56:
 /***/ function(module, exports, __webpack_require__) {
 
-	var gb = __webpack_require__(27);
+	var gb = __webpack_require__(28);
 	//import gb from "./online/globalData.js";
 
 	var initChart = function() {
 
 		var echarts = __webpack_require__(13);
 
-		var getOption = __webpack_require__(56);
+		var getOption = __webpack_require__(57);
 
 		__webpack_require__(5);
 
@@ -43891,17 +43891,17 @@
 		});
 	}();
 
-	var refreshData = __webpack_require__(57);
+	var refreshData = __webpack_require__(58);
 
 	refreshData.start(gb, 2000);
 
 /***/ },
 
-/***/ 56:
+/***/ 57:
 /***/ function(module, exports, __webpack_require__) {
 
 	var echarts = __webpack_require__(13);
-	var gb = __webpack_require__(27);
+	var gb = __webpack_require__(28);
 
 	module.exports = function() {
 		var bgPatternImg = new Image();
@@ -44195,10 +44195,10 @@
 
 /***/ },
 
-/***/ 57:
+/***/ 58:
 /***/ function(module, exports, __webpack_require__) {
 
-	var updateChart = __webpack_require__(58);
+	var updateChart = __webpack_require__(59);
 
 	module.exports = {
 		start: function(gb, timeLength) {
@@ -44217,7 +44217,7 @@
 
 /***/ },
 
-/***/ 58:
+/***/ 59:
 /***/ function(module, exports) {
 
 	function handleBarData(obj, gb, i) {
