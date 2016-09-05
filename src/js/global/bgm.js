@@ -2,7 +2,7 @@ var audioInit = function() {
 	function randomID(i) {
 		return Math.ceil(Math.random() * i);
 	}
-	var bgmid = randomID(7);
+	var bgmid = randomID(9);
 	$('#autoplay').attr('src', '//cbpm.applinzi.com/bgm/bgm' + bgmid + '.mp3');
 	var audio = document.getElementById('autoplay');
 	var controller = document.getElementById('musicBtn');

@@ -41,7 +41,9 @@ var exam = {
 	debug: false, //无网络测试模式
 	titleNumPerPart: 5, // 每关题目数量
 	part: 9, //答题关数
-	lastAnswerTime: 0
+	lastAnswerTime: 0,
+	curPart: 0,
+	passedPart:[]
 };
 
 module.exports = exam;
