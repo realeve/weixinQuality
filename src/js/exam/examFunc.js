@@ -222,12 +222,23 @@ function submitData(bCheck, answerNums, exam) {
 
 	var isNotPassed = needCheck && exam.error[order].length > 1;
 	var errNums = exam.error[order].length;
-	//是否所有题目均答完
-	if (bCheck && !isAllQuestionAnswered(exam)) {
-		if (!exam.realMatch) {
+
+	//非实时答题
+	if (!exam.realMatch) {
+		//有题未答完
+		//当前关验证通过则继续答题，否则向后提交
+		if (!isAllQuestionAnswered(exam) || !isNotPassed) {
 			return exam;
 		}
 	}
+
+	//是否所有题目均答完
+	// if (bCheck && !isAllQuestionAnswered(exam)) {
+	// 	if (!exam.realMatch) {
+	// 		return exam;
+	// 	}
+	// }
+
 	/*
 	var errStr = '';
 	exam.error.map(function(elem) {
@@ -420,6 +431,8 @@ module.exports = {
 			if ( /*curScore && */ exam.realMatch) {
 				//直接提交当前数据，不需审核
 				exam = submitData(false, curID, exam);
+			} else {
+				$.fn.fullpage.moveSlideRight();
 			}
 			// if (!needCheck) {
 			// 	setTimeout(function() {
