@@ -12378,7 +12378,7 @@
 						'<p style="font-size:2.5em;">' + questionList['part' + pNum].name + '</p>' +
 						'</article>' +
 						'</div>' +
-						'<img src="./welcome2.jpg" class="background_welcome" style="height:100%;width:100%;display:block;margin:0 auto;"/>' +
+						'<img src="./welcome.jpg" class="background_welcome" style="height:100%;width:100%;display:block;margin:0 auto;"/>' +
 						'</div>';
 					$('[name="sucessInfo"]').before(strTips);
 				} else {
