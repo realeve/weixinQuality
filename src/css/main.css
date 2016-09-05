@@ -255,6 +255,9 @@
 .blue-font {
     color: #445;
 }
+.dark-font{
+	color:#28273b;
+}
 
 .background_dark,.background_welcome,.background_main{
     background-repeat:no-repeat;

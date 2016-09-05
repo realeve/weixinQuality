@@ -34,7 +34,7 @@ var exam = {
 	sportid: SPORT.QUALITY,
 	editAnswer: allowEdit, //允许修改答案
 	curID: 0, //当前答题数
-	realMatch: true, //实时提交分数，用于比赛中用户成绩获取
+	realMatch: false, //实时提交分数，用于比赛中用户成绩获取
 	showTips: false,
 	lastPage: 0,
 	secColor: [],

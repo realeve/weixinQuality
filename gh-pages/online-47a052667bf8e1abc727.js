@@ -41,20 +41,19 @@
 /******/ 	return __webpack_require__(0);
 /******/ })
 /************************************************************************/
-/******/ ([
-/* 0 */
+/******/ ({
+
+/***/ 0:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __SRC_DIR = "./src";
 	__webpack_require__(1)(__SRC_DIR+"/css/jquery.fullPage.css");
-	__webpack_require__(8)(__SRC_DIR+"/css/weui.css");
-	__webpack_require__(30)(__SRC_DIR+"/css/score.css");
-	__webpack_require__(7)(__SRC_DIR+"/css/fakeLoader.css");
-	__webpack_require__(34)(__SRC_DIR+"/js/score.js");
+	__webpack_require__(33)(__SRC_DIR+"/js/online.js");
 	__webpack_require__(2)(__SRC_DIR+"/js/global/bgm.js");
 
 /***/ },
-/* 1 */
+
+/***/ 1:
 /***/ function(module, exports, __webpack_require__) {
 
 	var map = {
@@ -75,7 +74,8 @@
 
 
 /***/ },
-/* 2 */
+
+/***/ 2:
 /***/ function(module, exports, __webpack_require__) {
 
 	var map = {
@@ -96,21 +96,23 @@
 
 
 /***/ },
-/* 3 */
+
+/***/ 3:
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 4 */
+
+/***/ 4:
 /***/ function(module, exports) {
 
 	var audioInit = function() {
 		function randomID(i) {
 			return Math.ceil(Math.random() * i);
 		}
-		var bgmid = randomID(6);
-		$('#autoplay').attr('src', '//cbpc540.applinzi.com/topic/exam/assets/audio/bgm' + bgmid + '.mp3');
+		var bgmid = randomID(7);
+		$('#autoplay').attr('src', '//cbpm.applinzi.com/bgm/bgm' + bgmid + '.mp3');
 		var audio = document.getElementById('autoplay');
 		var controller = document.getElementById('musicBtn');
 		var controllerHint = document.getElementById('musicBtnTxt');
@@ -136,7 +138,8 @@
 	}();
 
 /***/ },
-/* 5 */
+
+/***/ 5:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -2943,221 +2946,15 @@
 
 
 /***/ },
-/* 6 */
+
+/***/ 6:
 /***/ function(module, exports) {
 
 	module.exports = window.$;
 
 /***/ },
-/* 7 */
-/***/ function(module, exports, __webpack_require__) {
 
-	var map = {
-		"./src/css/fakeLoader.css": 9
-	};
-	function webpackContext(req) {
-		return __webpack_require__(webpackContextResolve(req));
-	};
-	function webpackContextResolve(req) {
-		return map[req] || (function() { throw new Error("Cannot find module '" + req + "'.") }());
-	};
-	webpackContext.keys = function webpackContextKeys() {
-		return Object.keys(map);
-	};
-	webpackContext.resolve = webpackContextResolve;
-	module.exports = webpackContext;
-	webpackContext.id = 7;
-
-
-/***/ },
-/* 8 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var map = {
-		"./src/css/weui.css": 10
-	};
-	function webpackContext(req) {
-		return __webpack_require__(webpackContextResolve(req));
-	};
-	function webpackContextResolve(req) {
-		return map[req] || (function() { throw new Error("Cannot find module '" + req + "'.") }());
-	};
-	webpackContext.keys = function webpackContextKeys() {
-		return Object.keys(map);
-	};
-	webpackContext.resolve = webpackContextResolve;
-	module.exports = webpackContext;
-	webpackContext.id = 8;
-
-
-/***/ },
-/* 9 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 10 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 11 */
-/***/ function(module, exports) {
-
-	var SPORT = {
-		"SAFE": 0,
-		"PARTY": 1,
-		"PARTYJZ": 2,
-		"COST": 3,
-		"GREATWALL": 4,
-		"POWER": 5,
-		"XIAN": 6,
-		"QUALITY":7
-	};
-
-	module.exports = SPORT;
-
-/***/ },
-/* 12 */
-/***/ function(module, exports) {
-
-	/*--------------------------------------------------------------------
-	 *JAVASCRIPT "FakeLoader.js"
-	 *Version:    1.1.0 - 2014
-	 *author:     João Pereira
-	 *website:    http://www.joaopereira.pt
-	 *Licensed MIT 
-	-----------------------------------------------------------------------*/
-	(function ($) {
-	 
-	    $.fn.fakeLoader = function(options) {
-
-	        //Defaults
-	        var settings = $.extend({
-	            timeToHide:1200, // Default Time to hide fakeLoader
-	            pos:'fixed',// Default Position
-	            top:'0px',  // Default Top value
-	            left:'0px', // Default Left value
-	            width:'100%', // Default width 
-	            height:'100%', // Default Height
-	            zIndex: '999',  // Default zIndex 
-	            bgColor: '#2ecc71', // Default background color
-	            spinner:'spinner7', // Default Spinner
-	            imagePath:'' // Default Path custom image
-	        }, options);
-
-	        //Customized Spinners
-	        var spinner01 = '<div class="fl spinner1"><div class="double-bounce1"></div><div class="double-bounce2"></div></div>';
-	        var spinner02 = '<div class="fl spinner2"><div class="spinner-container container1"><div class="circle1"></div><div class="circle2"></div><div class="circle3"></div><div class="circle4"></div></div><div class="spinner-container container2"><div class="circle1"></div><div class="circle2"></div><div class="circle3"></div><div class="circle4"></div></div><div class="spinner-container container3"><div class="circle1"></div><div class="circle2"></div><div class="circle3"></div><div class="circle4"></div></div></div>';
-	        var spinner03 = '<div class="fl spinner3"><div class="dot1"></div><div class="dot2"></div></div>';
-	        var spinner04 = '<div class="fl spinner4"></div>'; 
-	        var spinner05 = '<div class="fl spinner5"><div class="cube1"></div><div class="cube2"></div></div>'; 
-	        var spinner06 = '<div class="fl spinner6"><div class="rect1"></div><div class="rect2"></div><div class="rect3"></div><div class="rect4"></div><div class="rect5"></div></div>'; 
-	        var spinner07 = '<div class="fl spinner7"><div class="circ1"></div><div class="circ2"></div><div class="circ3"></div><div class="circ4"></div></div>'; 
-
-	        //The target
-	        var el = $(this);
-
-	        //Init styles
-	        var initStyles = {
-	            'position':settings.pos,
-	            'width':settings.width,
-	            'height':settings.height,
-	            'top':settings.top,
-	            'left':settings.left
-	        };
-
-	        //Apply styles
-	        el.css(initStyles);
-
-	        //Each 
-	        el.each(function() {
-	            var a = settings.spinner;
-	            //console.log(a)
-	                switch (a) {
-	                    case 'spinner1':
-	                            el.html(spinner01);
-	                        break;
-	                    case 'spinner2':
-	                            el.html(spinner02);
-	                        break;
-	                    case 'spinner3':
-	                            el.html(spinner03);
-	                        break;
-	                    case 'spinner4':
-	                            el.html(spinner04);
-	                        break;
-	                    case 'spinner5':
-	                            el.html(spinner05);
-	                        break;
-	                    case 'spinner6':
-	                            el.html(spinner06);
-	                        break;
-	                    case 'spinner7':
-	                            el.html(spinner07);
-	                        break;
-	                    default:
-	                        el.html(spinner01);
-	                    }
-
-	                //Add customized loader image
-
-	                if (settings.imagePath !='') {
-	                    el.html('<div class="fl"><img src="'+settings.imagePath+'"></div>');
-	                }
-	                centerLoader();
-	        });
-
-	        //Time to hide fakeLoader
-	        setTimeout(function(){
-	            $(el).fadeOut();
-	        }, settings.timeToHide);
-
-	        //Return Styles 
-	        return this.css({
-	            'backgroundColor':settings.bgColor,
-	            'zIndex':settings.zIndex
-	        });
-
-	 
-	    }; // End Fake Loader
-	 
-
-	        //Center Spinner
-	        function centerLoader() {
-
-	            var winW = $(window).width();
-	            var winH = $(window).height();
-
-	            var spinnerW = $('.fl').outerWidth();
-	            var spinnerH = $('.fl').outerHeight();
-
-	            $('.fl').css({
-	                'position':'absolute',
-	                'left':(winW/2)-(spinnerW/2),
-	                'top':(winH/2)-(spinnerH/2)
-	            });
-
-	        }
-
-	        $(window).load(function(){
-	                centerLoader();
-	              $(window).resize(function(){
-	                centerLoader();
-	              });
-	        });
-
-
-	}(jQuery));
-
-
-
-
-
-/***/ },
-/* 13 */
+/***/ 13:
 /***/ function(module, exports, __webpack_require__) {
 
 	(function webpackUniversalModuleDefinition(root, factory) {
@@ -43997,23 +43794,29 @@
 	;
 
 /***/ },
-/* 14 */,
-/* 15 */,
-/* 16 */,
-/* 17 */,
-/* 18 */,
-/* 19 */,
-/* 20 */,
-/* 21 */,
-/* 22 */,
-/* 23 */,
-/* 24 */,
-/* 25 */,
-/* 26 */,
-/* 27 */
+
+/***/ 28:
 /***/ function(module, exports) {
 
+	function getUrlParam(name) {
+		var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+		var r = encodeURI(window.location.search).substr(1).match(reg); //匹配目标参数
+		if (r !== null) return decodeURI(r[2]);
+		return null; //返回参数值
+	}
+	var SPORT = {
+		"SAFE": 0,
+		"PARTY": 1,
+		"PARTYJZ": 2
+	};
+
+	var sportid = getUrlParam('sid');
+	var perScore = getUrlParam('score');
+	var cht_title = getUrlParam('city');
+	cht_title = (cht_title == null) ? '质量月微信现场竞答活动' : decodeURI(cht_title);
+
 	var gb = {
+		//bgmid:2,
 		windowTitle: '',
 		loadComplete: false,
 		colors: {
@@ -44025,26 +43828,24 @@
 			primary: "#556fb5",
 			primaryLight: "#889acb"
 		},
-		dbSheetIdx: 53, //数据库中成绩表单初始ID值，减去该值后得到用户是第几个参加活动
-		option: [],
-		optionRenderFlag: [],
-		userInfo: {},
-		dom: [],
+		title: cht_title,
+		option: {},
 		myChart: [],
-		loadBscInfo: false,
-		color: ["#61A5E8", "#7ECF51", "#EECB5F", "#E4925D", "#E16757", "#9570E5", "#605FF0", "#85ca36", "#1c9925", "#0d8b5f", "#0f9cd3", "#2f7e9b", "#2f677d", "#9b7fed", "#7453d6", "#3b1d98", "#27abb1", "#017377", "#015f63", "#b86868", "#5669b7", "#e5aab4", "#60b65f", "#98d2b2", "#c9c8bc", "#45c3dc", "#e17979", "#5baa5a", "#eaccc2", "#ffaa74"]
+		dom: [],
+		color: ["#61A5E8", "#7ECF51", "#EECB5F", "#E4925D", "#E16757", "#9570E5", "#605FF0", "#85ca36", "#1c9925", "#0d8b5f", "#0f9cd3", "#2f7e9b", "#2f677d", "#9b7fed", "#7453d6", "#3b1d98", "#27abb1", "#017377", "#015f63", "#b86868", "#5669b7", "#e5aab4", "#60b65f", "#98d2b2", "#c9c8bc", "#45c3dc", "#e17979", "#5baa5a", "#eaccc2", "#ffaa74"],
+		sportid: (sportid == null) ? 2 : sportid,
+		perScore: (perScore == null) ? 1 : perScore
 	};
 
 	module.exports = gb;
 
 /***/ },
-/* 28 */,
-/* 29 */,
-/* 30 */
+
+/***/ 33:
 /***/ function(module, exports, __webpack_require__) {
 
 	var map = {
-		"./src/css/score.css": 47
+		"./src/js/online.js": 55
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -44057,1033 +43858,503 @@
 	};
 	webpackContext.resolve = webpackContextResolve;
 	module.exports = webpackContext;
-	webpackContext.id = 30;
+	webpackContext.id = 33;
 
 
 /***/ },
-/* 31 */,
-/* 32 */,
-/* 33 */,
-/* 34 */
+
+/***/ 55:
 /***/ function(module, exports, __webpack_require__) {
 
-	var map = {
-		"./src/js/score.js": 60
-	};
-	function webpackContext(req) {
-		return __webpack_require__(webpackContextResolve(req));
-	};
-	function webpackContextResolve(req) {
-		return map[req] || (function() { throw new Error("Cannot find module '" + req + "'.") }());
-	};
-	webpackContext.keys = function webpackContextKeys() {
-		return Object.keys(map);
-	};
-	webpackContext.resolve = webpackContextResolve;
-	module.exports = webpackContext;
-	webpackContext.id = 34;
+	var gb = __webpack_require__(28);
+	//import gb from "./online/globalData.js";
 
+	var initChart = function() {
 
-/***/ },
-/* 35 */,
-/* 36 */,
-/* 37 */,
-/* 38 */,
-/* 39 */,
-/* 40 */,
-/* 41 */,
-/* 42 */,
-/* 43 */,
-/* 44 */,
-/* 45 */,
-/* 46 */,
-/* 47 */
-/***/ function(module, exports) {
+		var echarts = __webpack_require__(13);
 
-	// removed by extract-text-webpack-plugin
+		var getOption = __webpack_require__(56);
 
-/***/ },
-/* 48 */,
-/* 49 */,
-/* 50 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var gb = __webpack_require__(27);
-	var initOption = function() {
-		var option = {
-			color: ['rgba(255,255,255,0.6)'],
-			grid: {
-				borderWidth: 0,
-				x: 15,
-				y: 60,
-				x2: 15,
-				y2: 35
-			},
-			tooltip: {},
-			yAxis: [{
-				type: 'category',
-				"show": false,
-				data: []
-			}],
-			xAxis: [{
-				type: 'value',
-				splitLine: {
-					show: !0,
-					lineStyle: {
-						type: "dashed",
-						color: gb.colors.whiteLight
-					}
-				},
-				axisLine: {
-					show: !1
-				},
-				axisTick: {
-					show: !1
-				},
-				boundaryGap: 0,
-				axisLabel: {
-					textStyle: {
-						color: gb.colors.whiteMedium
-					}
-				}
-			}],
-			series: [{
-				name: '得分',
-				type: "bar",
-				barMaxWidth: 60,
-				areaStyle: {
-					normal: {
-						color: gb.colors.whiteMediumLight
-					}
-				},
-				lineStyle: {
-					normal: {
-						width: 1
-					}
-				},
-				data: [],
-				itemStyle: {
-					normal: {
-						color: gb.colors.whiteMedium,
-						width: 1,
-						label: {
-							show: false,
-							textStyle: {
-								fontSize: 15,
-								color: '#fff'
-							},
-							position: 'insideRight',
-							formatter: '{b}:{c}'
-						},
-						barBorderRadius: 2
-					}
-				},
-				//animationEasing: 'cubicInOut',
-				//animationEasingUpdate: 'cubicInOut',
-				animationDelay: function(idx) {
-					return idx * 200;
-				},
-				animationDelayUpdate: function(idx) {
-					return idx * 200;
-				}
-			}]
-		};
-		return option;
-	};
-
-	module.exports = {
-		initOption: initOption,
-		getUrlParam: function(name) {
-			var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
-			var r = encodeURI(window.location.search).substr(1).match(reg); //匹配目标参数
-			if (r !== null) return decodeURI(r[2]);
-			return -1; //返回参数值
-		}
-	};
-
-/***/ },
-/* 51 */,
-/* 52 */,
-/* 53 */
-/***/ function(module, exports) {
-
-	var SPORTNAME = ['安全月', '两学一做', '两学一做', '成本月', '成本月', '两学一做', '反假币', '质量月'];
-	module.exports = SPORTNAME;
-
-/***/ },
-/* 54 */,
-/* 55 */,
-/* 56 */,
-/* 57 */,
-/* 58 */,
-/* 59 */,
-/* 60 */
-/***/ function(module, exports, __webpack_require__) {
-
-	//公共资源
-	__webpack_require__(5);
-	__webpack_require__(12);
-
-	var echarts = __webpack_require__(13);
-
-	var SPORT = __webpack_require__(11);
-	var SPORTNAME = __webpack_require__(53);
-	var gb = __webpack_require__(27);
-	var util = __webpack_require__(50);
-
-	var uid = util.getUrlParam('uid');
-	gb.sportid = util.getUrlParam('sid');
-
-
-	var setSportDpt = function() {
-
-		//此处设置一个较长数值，数据载入完毕后再显示
-		$("#fakeLoader").fakeLoader({
-			timeToHide: 600000, //Time in milliseconds for fakeLoader disappear
-			bgColor: "#9b59b6",
-			spinner: "spinner7"
-		});
-		$('.fl').parent().append('<p class="center" style="position:absolute;width:100%;top:60%;color:#fff">载入中</p>');
-		for (var i = 1; i < 7; i++) {
-			gb.dom[i] = document.getElementById("chart" + i);
-		}
-
-		$('[name="sportname"]').text(SPORTNAME[gb.sportid]);
-		var str = [];
-
-		str[0] = '<p style="font-size: 1em;padding-top:30px;">安全保卫部</p>' +
-			'<p style="font-size: 1em">企业文化部</p>';
-		str[1] = '<p style="font-size: 1em;padding-top:30px;">党委组织部</p>' +
-			'<p style="font-size: 1em">党委宣传部</p>' +
-			'<p style="font-size: 1em">公司团委</p>';
-		str[2] = '<p style="font-size: 1em;padding-top:30px;">管三党支部</p>';
-		str[3] = '<p style="font-size: 1em;padding-top:30px;">计划财务部</p>' +
-			'<p style="font-size: 1em">党委宣传部</p>';
-		str[4] = '<p style="font-size: 1em;padding-top:30px;">中钞长城贵金属有限公司</p>';
-		str[5] = '<p style="font-size: 1em;padding-top:30px;">能源环保部</p>';
-		str[6] = '<p style="font-size: 1em;padding-top:30px;">中国人民银行商洛市中心支行</p>';
-		str[7] = '<p style="font-size: 1em;padding-top:30px;">技术质量部</p>';
-		$('[name="sportMaster"]').html(str[gb.sportid]);
-	}();
-
-
-	function getScoreOrder() {
-		//载入首页信息完毕，准备第二页信息
-		$.ajax({
-			url: '//cbpc540.applinzi.com/index.php?s=/addon/GoodVoice/GoodVoice/getScoreOrder&score=' + gb.userInfo.score,
-			data: {
-				sportid: gb.sportid
-			},
-			async: false,
-			dataType: "jsonp",
-			callback: "JsonCallback"
-		}).done(function(obj) {
-			//console.log(1);
-			//$('[name="progress"]').text('10%');
-			gb.userInfo.peopleNums = obj.allPeople;
-			//gb.userInfo.peopleNums = //obj.allPeople;
-			gb.userInfo.scoreOrder = obj.scoreOrder;
-			gb.userInfo.scorePropt = obj.lessThan;
-			//总人数
-			$('[name="totals"]').text(gb.userInfo.peopleNums);
-
-			$('[name="ltdOrder"]').text(gb.userInfo.scoreOrder);
-			$('[name="scorePropt"]').text(gb.userInfo.scorePropt);
-			$('[name="scoreProptDesc"]').text(Number.parseFloat(gb.userInfo.scorePropt) > 50 ? "，想想是不是有点小激动呢？" : "。");
-			getScoreOrderByDpt();
-		});
-	}
-
-	function getScoreOrderByDpt() {
-		//载入首页信息完毕，准备第二页信息
-		$.ajax({
-			url: '//cbpc540.applinzi.com/index.php?s=/addon/GoodVoice/GoodVoice/getScoreOrderByDpt&score=' + gb.userInfo.score + "&dpt=" + gb.userInfo.user_dpt,
-
-			data: {
-				sportid: gb.sportid
-			},
-			async: false,
-			dataType: "jsonp",
-			callback: "JsonCallback"
-		}).done(function(obj) {
-			//console.log(2);
-			//$('[name="progress"]').text('20%');
-			gb.userInfo.dpt = {};
-			gb.userInfo.dpt.all = obj.dpt_people;
-			gb.userInfo.dpt.peopleNums = obj.allPeople;
-			gb.userInfo.dpt.scoreOrder = obj.scoreOrder;
-			gb.userInfo.dpt.scorePropt = obj.lessThan;
-
-			$('[name="dptName"]').text(gb.userInfo.user_dpt);
-
-			//总人数
-			$('[name="dptCrewNum"]').text(gb.userInfo.dpt.all);
-			$('[name="dptTotals"]').text(gb.userInfo.dpt.peopleNums);
-			$('[name="dptOrder"]').text(gb.userInfo.dpt.scoreOrder);
-
-			$('[name="dptScorePropt"]').text(gb.userInfo.dpt.scorePropt);
-			getTimeLength();
-		});
-	}
-	// Handles counterup plugin wrapper
-	var handleCounterup = function(obj, time) {
-		if (!$().counterUp) {
-			return;
-		}
-
-		obj.counterUp({
-			delay: 10,
-			time: time
-		});
-	};
-
-	//handleCounterup($('[name="progress"]'), 5000);
-
-	//用户分数排名(在部门或在公司中排序)
-	function getScoreRangeOption(obj, option) {
-		userScore = Math.floor(Number.parseInt(gb.userInfo.score) / 10) * 10;
-		option.grid.x = 35;
-		option.yAxis = [{
-			"type": "category",
-			"show": true,
-			"axisLine": {
-				"show": false
-			},
-			"axisTick": {
-				"show": false
-			},
-			"splitLine": {
-				"show": false
-			},
-			"axisLabel": {
-				"textStyle": {
-					"color": "rgba(255, 255, 255, 0.6)"
-				}
-			},
-			"data": []
-		}];
-		obj.map(function(data, i) {
-			option.yAxis[0].data.push(data.score);
-			if (userScore != data.score) {
-				option.series[0].data.push(data.nums);
-			} else {
-				option.series[0].data.push({
-					value: data.nums,
-					itemStyle: {
-						normal: {
-							color: '#95E570'
-						}
-					},
-					label: {
-						normal: {
-							show: true,
-							formatter: '你的分数 ' + gb.userInfo.score + ' 分'
-						}
-					}
-				});
-			}
-		});
-		return option;
-	}
-
-	function getTimeLength() {
-
-		$.ajax({
-			url: '//cbpc540.applinzi.com/index.php?s=/addon/GoodVoice/GoodVoice/getTimeLength',
-			data: {
-				dpt: gb.userInfo.user_dpt,
-				sportid: gb.sportid
-			},
-			async: false,
-			dataType: "jsonp",
-			callback: "JsonCallback"
-		}).done(function(obj) {
-			//console.log(3);
-			//$('[name="progress"]').text('30%');
-			gb.userInfo.dptTime = obj.dptTime;
-			gb.userInfo.ltdTime = obj.ltdTime;
-
-			$('[name="timeDesc1"]').text(Number.parseInt(gb.userInfo.timeUsed) < Number.parseInt(gb.userInfo.dptTime) ? '低于' : '高于');
-			$('[name="timeDesc2"]').text(Number.parseInt(gb.userInfo.timeUsed) < Number.parseInt(gb.userInfo.ltdTime) ? '低于' : '高于');
-
-			//总人数
-			$('[name="dptTimeLength"]').text((Number.parseInt(gb.userInfo.dptTime) / 60).toFixed(1));
-			$('[name="ltdTimeLength"]').text((Number.parseInt(gb.userInfo.ltdTime) / 60).toFixed(1));
-
-			getAnsweredRatio();
-		});
-	}
-
-	//活动参与度
-	function getAnsweredRatio() {
-		$.ajax({
-			url: '//cbpc540.applinzi.com/index.php?s=/addon/GoodVoice/GoodVoice/getAnsweredRatio',
-			data: {
-				sportid: gb.sportid
-			},
-			async: false,
-			dataType: "jsonp",
-			callback: "JsonCallback"
-		}).done(function(obj) {
-			//console.log(4);
-			//$('[name="progress"]').text('40%');
-			//部门间比较信息
-			//gb.userInfo.dptCompare = {};
-			gb.userInfo.dptCompare.answerRatio = obj;
-			$('[name="mostPeople"]').text(obj[0].dpt);
-			$('[name="answeredPrpt"]').text(obj[0].answeredRatio);
-
-			//如果不是第一
-			if (obj[0].dpt != gb.userInfo.user_dpt) {
-				$('[name="answerRatioDesc"]').text(',赶快邀请小伙伴们来参与吧。');
-			} else {
-				$('[name="answerRatioDesc"]').text('，告诉小伙伴们要继续努力哦。');
-			}
-			getScoreCompare();
-		});
-	}
-
-	//得分对比
-	function getScoreCompare() {
-		$.ajax({
-			url: '//cbpc540.applinzi.com/index.php?s=/addon/GoodVoice/GoodVoice/getScoreCompare',
-			data: {
-				sportid: gb.sportid
-			},
-			async: false,
-			dataType: "jsonp",
-			callback: "JsonCallback"
-		}).done(function(obj) {
-			//console.log(5);
-			//$('[name="progress"]').text('50%');
-			//部门间比较信息
-			//gb.userInfo.dptCompare = {};
-			gb.userInfo.dptCompare.scoreCompare = obj;
-			$('[name="highestScore"]').text(obj[0].dpt);
-			$('[name="highestScorePrpt"]').text(obj[0].score);
-			//getPrizeCompare();
-			//get2ndPassedCompare();
-			getScoreRangeByDpt();
-		});
-	}
-
-	//获奖对比
-	// function getPrizeCompare() {
-	// 	$.ajax({
-	// 		url: '//cbpc540.applinzi.com/index.php?s=/addon/GoodVoice/GoodVoice/getPrizeCompare',
-	// 		data: {
-	// 			sportid: gb.sportid
-	// 		},
-	// 		async: false,
-	// 		dataType: "jsonp",
-	// 		callback: "JsonCallback"
-	// 	}).done(function(obj) {
-	// 		//console.log(6);
-	// 		//$('[name="progress"]').text('60%');
-	// 		//部门间比较信息
-	// 		//gb.userInfo.dptCompare = {};
-	// 		gb.userInfo.dptCompare.prizeCompare = obj;
-	// 		$('[name="prizePrpt"]').text(obj[0].passRatio);
-
-	// 		//get2ndPassedCompare();
-
-	// 	});
-	// }
-
-	//获奖对比
-	// function get2ndPassedCompare() {
-	// 	$.ajax({
-	// 		url: '//cbpc540.applinzi.com/index.php?s=/addon/GoodVoice/GoodVoice/get2ndPassedRatio',
-	// 		data: {
-	// 			sportid: gb.sportid
-	// 		},
-	// 		async: false,
-	// 		dataType: "jsonp",
-	// 		callback: "JsonCallback"
-	// 	}).done(function(obj) {
-	// 		//console.log(7);
-	// 		//$('[name="progress"]').text('70%');
-	// 		$('[name="2ndTimesPrpt"]').text(obj['2ndPassedRatio']);
-	// 		$('[name="1stTime"]').text(obj.moreChance);
-
-	// 		$.ajax({
-	// 			url: '//cbpc540.applinzi.com/index.php?s=/addon/GoodVoice/GoodVoice/get2ndPassedCompare',
-	// 			data: {
-	// 				sportid: gb.sportid
-	// 			},
-	// 			async: false,
-	// 			dataType: "jsonp",
-	// 			callback: "JsonCallback"
-	// 		}).done(function(obj) {
-	// 			//gb.userInfo.dptCompare = {};
-	// 			//console.log(8);
-	// 			//$('[name="progress"]').text('80%');
-	// 			gb.userInfo.dptCompare.moreChancePassedCompare = obj;
-	// 			getScoreRangeByDpt();
-	// 		});
-
-	// 	});
-	// }
-
-	function getScoreRangeByDpt() {
-		$.ajax({
-			url: '//cbpc540.applinzi.com/index.php?s=/addon/GoodVoice/GoodVoice/getScoreRangeByDpt&dpt=' + gb.userInfo.user_dpt,
-
-			data: {
-				sportid: gb.sportid
-			},
-			async: false,
-			dataType: "jsonp",
-			callback: "JsonCallback"
-		}).done(function(obj) {
-			//console.log(9);
-			//$('[name="progress"]').text('90%');
-			var mostScore = obj[obj.length - 1];
-			$('[name="dptMostScore"]').text(mostScore.score);
-			$('[name="dptMostScoreNum"]').text(mostScore.nums);
-			if (gb.sportid == SPORT.PARTY) {
-				$('[name="dptMostScoreDesc"]').text("他们一定在“两学一做”学习教育中狠抓落实，对党的相关知识熟记于心了。");
-			}
-			gb.userInfo.dptScoreOrder = obj;
-			getScoreRange();
-		});
-	}
-
-	function getScoreRange() {
-
-		$.ajax({
-			url: '//cbpc540.applinzi.com/index.php?s=/addon/GoodVoice/GoodVoice/getScoreRange',
-			data: {
-				sportid: gb.sportid
-			},
-			async: false,
-			dataType: "jsonp",
-			callback: "JsonCallback"
-		}).done(function(obj) {
-			//console.log(10);
-			gb.userInfo.scoreRange = obj;
-			for (var i = 2; i <= 8; i++) {
-				gb.option[i] = getOptions(i);
-			}
-			//$('[name="progress"]').text('99%');
-			initDom();
-		});
-	}
-
-	var getOptions = function(index) {
-		var option;
-		if (index == 2 && !gb.optionRenderFlag[index - 2]) {
-
-			option = util.initOption();
-			option.series[0].data = [];
-			option = getScoreRangeOption(gb.userInfo.scoreRange, option);
-			gb.optionRenderFlag[index - 2] = true;
-			return option;
-
-		} else if (index == 3 && !gb.optionRenderFlag[index - 2]) {
-
-			option = util.initOption();
-			option.series[0].data = [];
-			option = getScoreRangeOption(gb.userInfo.dptScoreOrder, option);
-
-			//gb.myChart[index - 2].setOption(option);
-			gb.optionRenderFlag[index - 2] = true;
-			return option;
-
-		} else if (index == 4 && !gb.optionRenderFlag[index - 2]) {
-			//获取下一页，参与度信息
-
-			option = util.initOption();
-
-			option.series[0].data = [];
-			option.yAxis[0].data = ['全公司', gb.userInfo.user_dpt, gb.userInfo.user_name];
-			option.series[0].name = "答题时间";
-			option.series[0].data = [(Number.parseInt(gb.userInfo.ltdTime) / 60).toFixed(1), (Number.parseInt(gb.userInfo.dptTime) / 60).toFixed(1), {
-				value: (Number.parseInt(gb.userInfo.timeUsed) / 60).toFixed(1),
-				itemStyle: {
-					normal: {
-						color: 'rgb(99,201,99)',
-						label: {
-							"textStyle": {
-								"color": "#fff"
-							}
-						}
-					}
-				}
-			}];
-			option.series[0].itemStyle.normal.label = {
-				"show": true,
-				"textStyle": {
-					"fontSize": 18,
-					"color": "#333"
-				},
-				"position": "insideLeft",
-				"formatter": "{b}:{c}分钟"
-			};
-
-			//gb.myChart[index - 2].setOption(option);
-			gb.optionRenderFlag[index - 2] = true;
-			return option;
-
-		} else if (index == 5 && !gb.optionRenderFlag[index - 2]) {
-
-			option = util.initOption();
-			option.series = [{
-				name: '已参与',
-				type: 'bar',
-				barMaxWidth: 60,
-				stack: '比例',
-				label: {
-					normal: {
-						show: false,
-						position: 'insideLeft',
-						textStyle: {
-							fontSize: 15
-						},
-						formatter: function(param) {
-							return param.name + '\n' + (param.value).toFixed(2) + '%';
-						}
-					}
-				},
-				itemStyle: {
-					normal: {
-						color: function(params) {
-							return gb.color[params.dataIndex];
-						},
-					}
-				},
-				data: [],
-				//animationEasing: 'cubicInOut',
-				//animationEasingUpdate: 'cubicInOut',
-				animationDelay: function(idx) {
-					return idx * 100;
-				},
-				animationDelayUpdate: function(idx) {
-					return idx * 100;
-				}
-			}, {
-				name: '未参与',
-				type: 'bar',
-				barMaxWidth: 60,
-				stack: '比例',
-				label: {
-					normal: {
-						show: true,
-						position: 'insideRight',
-						textStyle: {
-							fontSize: 15
-						},
-						formatter: function(param) {
-							return param.name + '\n' + (100 - param.value).toFixed(2) + '%';
-						}
-					}
-				},
-				itemStyle: {
-					normal: {
-						color: gb.colors.whiteMediumLight
-					}
-				},
-				data: [],
-				//animationEasing: 'cubicInOut',
-				//animationEasingUpdate: 'cubicInOut',
-				animationDelay: function(idx) {
-					return idx * 100;
-				},
-				animationDelayUpdate: function(idx) {
-					return idx * 100;
-				}
-			}];
-
-			gb.userInfo.dptCompare.answerRatio.map(function(data) {
-				option.yAxis[0].data.push(data.dpt);
-				var curRatio = Number.parseFloat(data.answeredRatio);
-				option.series[0].data.push(curRatio);
-				option.series[1].data.push(100 - curRatio);
-			});
-			//如果有一半以上的人员参与
-			if (option.series[0].data[0] > 50) {
-				option.series[0].label.normal.show = true;
-				option.series[1].label.normal.show = false;
-			}
-			option.yAxis[0].data.reverse();
-			option.series[0].data.reverse();
-			option.series[1].data.reverse();
-
-			//gb.myChart[index - 2].setOption(option);
-			gb.optionRenderFlag[index - 2] = true;
-			return option;
-
-		} else if (index == 6 && !gb.optionRenderFlag[index - 2]) {
-
-			option = {
-				color: gb.color,
-				tooltip: {
-					trigger: 'item',
-					formatter: "{a} <br/>{b}分 : {c}人 ({d}%)"
-				},
-				legend: {
-					show: false,
-					orient: 'vertical',
-					left: 'left',
-					data: []
-				},
-				series: [{
-					name: '得分分布',
-					type: 'pie',
-					radius: '60%',
-					center: ['50%', '50%'],
-					data: [],
-					label: {
-						normal: {
-							textStyle: {
-								color: '#334'
-							},
-							formatter: '{b}分\n({d}%)'
-						}
-					},
-					labelLine: {
-						normal: {
-							length: 10,
-							lineStyle: {
-								color: '#334'
-							}
-						}
-					},
-					//animationEasing: 'cubicInOut',
-					//animationEasingUpdate: 'cubicInOut',
-					animationDelay: function(idx) {
-						return idx * 100;
-					},
-					animationDelayUpdate: function(idx) {
-						return idx * 100;
-					}
-				}]
-			};
-			gb.userInfo.dptScoreOrder.map(function(data) {
-				option.legend.data.push(data.score);
-				option.series[0].data.push({
-					name: data.score,
-					value: data.nums
-				});
-			});
-
-			//gb.myChart[index - 2].setOption(option);
-			gb.optionRenderFlag[index - 2] = true;
-			return option;
-
-		} else if (index == 7 && !gb.optionRenderFlag[index - 2]) {
-
-			option = util.initOption();
-			option.tooltip = {
-				trigger: 'item',
-				formatter: "{a} <br/>{b} :{c}分"
-			};
-			option.series = [{
-				name: '平均得分',
-				type: 'bar',
-				label: {
-					normal: {
-						show: true,
-						position: 'insideRight',
-						textStyle: {
-							fontSize: 15
-						},
-						formatter: '{b}\n{c}分'
-					}
-				},
-				itemStyle: {
-					normal: {
-						color: function(params) {
-							return gb.color[params.dataIndex];
-						},
-					}
-				},
-				data: [],
-				//animationEasing: 'cubicInOut',
-				//animationEasingUpdate: 'cubicInOut',
-				animationDelay: function(idx) {
-					return idx * 100;
-				},
-				animationDelayUpdate: function(idx) {
-					return idx * 100;
-				}
-			}];
-
-			gb.userInfo.dptCompare.scoreCompare.map(function(data) {
-				option.yAxis[0].data.push(data.dpt);
-				option.series[0].data.push(data.score);
-			});
-			option.yAxis[0].data.reverse();
-			option.series[0].data.reverse();
-
-			//gb.myChart[index - 2].setOption(option);
-			gb.optionRenderFlag[index - 2] = true;
-			return option;
-
-		}
-		/*else if (index == 8 && !gb.optionRenderFlag[index - 2]) {
-
-			option = util.initOption();
-
-			option.tooltip = {
-				trigger: 'item',
-				formatter: "{a} <br/>{b} : {c}%"
-			};
-			option.series = [{
-				name: '获奖比例',
-				type: 'bar',
-				barMaxWidth: 60,
-				label: {
-					normal: {
-						show: true,
-						position: 'insideRight',
-						textStyle: {
-							fontSize: 15
-						},
-						formatter: '{b}\n{c}%'
-					}
-				},
-				itemStyle: {
-					normal: {
-						color: function(params) {
-							return gb.color[params.dataIndex];
-						},
-					}
-				},
-				data: [],
-				//animationEasing: 'cubicInOut',
-				//animationEasingUpdate: 'cubicInOut',
-				animationDelay: function(idx) {
-					return idx * 100;
-				},
-				animationDelayUpdate: function(idx) {
-					return idx * 100;
-				}
-			}];
-
-			gb.userInfo.dptCompare.prizeCompare.map(function(data) {
-				option.yAxis[0].data.push(data.dpt);
-				option.series[0].data.push(data.dptPassRatio);
-			});
-			option.yAxis[0].data.reverse();
-			option.series[0].data.reverse();
-
-			//gb.myChart[index - 2].setOption(option);
-			gb.optionRenderFlag[index - 2] = true;
-			return option;
-
-		}
-		else if (index == 8 && !gb.optionRenderFlag[index - 2]) {
-
-			option = util.initOption();
-			option.legend = {
-				show: true,
-				data: ['第二次', '第一次'],
-				textStyle: {
-					color: '#fff'
-				},
-				x: 'right',
-				y: 30
-			};
-			option.tooltip = {
-				trigger: 'item',
-				formatter: "{a} <br/>{b} : {c}%"
-			};
-			option.yAxis = [{
-				"type": "category",
-				"show": true,
-				"axisLine": {
-					"show": false
-				},
-				"axisTick": {
-					"show": false
-				},
-				"splitLine": {
-					"show": false
-				},
-				"axisLabel": {
-					"textStyle": {
-						"color": "rgba(255, 255, 255, 0.6)"
-					}
-				},
-				"data": []
-			}];
-			option.grid.x = 95;
-			option.color = gb.color;
-			option.series = [{
-				name: '第二次',
-				type: 'bar',
-				barMaxWidth: 60,
-				stack: '总比例',
-				label: {
-					normal: {
-						show: false
-					}
-				},
-				data: [],
-				//animationEasing: 'cubicInOut',
-				//animationEasingUpdate: 'cubicInOut',
-				animationDelay: function(idx) {
-					return idx * 100;
-				},
-				animationDelayUpdate: function(idx) {
-					return idx * 100;
-				}
-			}, {
-				name: '第一次',
-				type: 'bar',
-				barMaxWidth: 60,
-				stack: '总比例',
-				label: {
-					normal: {
-						show: false
-					}
-				},
-				data: [],
-				//animationEasing: 'cubicInOut',
-				//animationEasingUpdate: 'cubicInOut',
-				animationDelay: function(idx) {
-					return idx * 100;
-				},
-				animationDelayUpdate: function(idx) {
-					return idx * 100;
-				}
-			}];
-			gb.userInfo.dptCompare.moreChancePassedCompare.map(function(data) {
-				option.yAxis[0].data.push(data.dpt);
-				option.series[0].data.push(data['2ndPassed']);
-				option.series[1].data.push(data['1stPassed']);
-			});
-
-			option.yAxis[0].data.reverse();
-			option.series[0].data.reverse();
-			option.series[1].data.reverse();
-
-			//gb.myChart[index - 2].setOption(option);
-			gb.optionRenderFlag[index - 2] = true;
-			return option;
-		}*/
-	};
-
-
-	//sectionsColor: ['#293c55'],
-	var initDom = function() {
+		__webpack_require__(5);
 
 		$('#fullpage').fullpage({
-			navigation: true,
-			afterRender: function(index, direction) {
-
-				for (var i = 1; i < 7; i++) {
-					gb.myChart[i - 1] = echarts.init(gb.dom[i]);
-				}
-
-				$(window).resize(function() {
-					for (var i = 1; i < 7; i++) {
-						gb.myChart[i - 1].resize();
-					}
-				});
-
-				//最后一页隐藏箭头
-				if (index == 7 && (direction == 'down')) {
-					$('.iSlider-arrow').hide();
-				}
-			},
-			afterLoad: function(anchor, index) {
-				handleCounterup($(".section:nth(" + (index - 1) + ")").find(".number"), 500);
-
-				if (index >= 2 && index <= 7) {
-					gb.myChart[index - 2] = echarts.init(gb.dom[index - 1]);
-					gb.myChart[index - 2].setOption(gb.option[index]);
-				}
-
-				if (index == 8) {
-					//console.log('进入最后一页');
-					$('.iSlider-arrow').hide();
-				} else {
-					$('.iSlider-arrow').show();
-				}
-			}
+			sectionColor: ['#f2f3f4']
 		});
 
-		$('.hidden').removeClass('hidden');
+		gb.dom[0] = document.getElementById("chart0");
+		gb.option = getOption();
+		gb.myChart[0] = echarts.init(gb.dom[0]);
+		gb.myChart[0].setOption(gb.option);
 
-		//全屏加载完毕
-		if (!gb.loadComplete) {
-			$("#fakeLoader").hide();
-			gb.loadComplete = true;
-		}
-	};
-
-	var refreshData = function() {
-		$.ajax({
-			url: '//cbpc540.applinzi.com/index.php?s=/addon/GoodVoice/GoodVoice/getSafeExamData&uid=' + uid,
-			data: {
-				sportid: gb.sportid
-			},
-			async: false,
-			dataType: "jsonp",
-			callback: "JsonCallback"
-		}).done(function(obj) {
-			gb.loadBscInfo = obj.status;
-			if (gb.loadBscInfo) {
-
-				gb.userInfo = obj;
-				gb.userInfo.dptCompare = {};
-				gb.userInfo.user_dpt = gb.userInfo.user_dpt.trim();
-				$('[name="userName"]').text(gb.userInfo.user_name);
-				$('[name ="userOrder"]').text(gb.userInfo.answerOrder); //Number.parseInt(gb.userInfo.id) - gb.dbSheetIdx
-				$('[name="userScore"]').text(gb.userInfo.score);
-
-				gb.windowTitle = '我在本次' + SPORTNAME[gb.sportid] + '答题活动获得了' + gb.userInfo.score + '分，你也来参加吧！';
-				document.title = gb.windowTitle;
-
-				if (gb.sportid == SPORT.PARTYJZ) {
-					//$('[name="myErr"]').hide();
-					$('.section').last().find('p:nth(2)').hide();
-					$('.section').last().find('p:nth(3)').hide();
-					$('.section').last().find('p:nth(1)').text('管三党支部').css('font-size', '1.5em');
-				}
-
-				if (gb.userInfo.score == 100) {
-					$('[name="myErr"]').hide();
-				} else {
-					$('[name="myErr"]').attr('href', window.location.href.replace('score', 'error'));
-				}
-
-
-				//所用时间
-				var minutes = Math.floor(Number.parseInt(gb.userInfo.timeUsed) / 60);
-				var seconds = Number.parseInt(gb.userInfo.timeUsed) % 60;
-
-				$('[name="userMinuteLength"]').text(minutes);
-				$('[name="userSecondLength"]').text(seconds);
-
-				var scoreDesc = (Number.parseInt(gb.userInfo.score) >= 80) ? "这是一个不错的分数哟" : "下次还需要继续努力呢";
-
-				$('[name="scoreDesc"]').text(scoreDesc);
-				$('[name="answerTimes"]').text(gb.userInfo.iTimes == "1" ? "仅用了一次机会便" : "用了两次机会");
-				//$('[name="answerTimes"]').text("用了" + gb.userInfo.iTimes + "次机会");
-
-
-				getScoreOrder();
-
-				/*getTimeLength();
-				getAnsweredRatio();
-				getScoreCompare();
-				getPrizeCompare();
-				get2ndPassedCompare();
-
-				console.log(JSON.stringify(gb.userInfo));
-
-				for (var i = 2; i <= 9; i++) {
-				    gb.option[i] = getOptions(i);
-				}
-
-				initDom();*/
-
-			}
+		$(window).on('resize', function() {
+			gb.myChart[0].resize();
 		});
 	}();
 
+	var refreshData = __webpack_require__(57);
+
+	refreshData.start(gb, 2000);
+
+/***/ },
+
+/***/ 56:
+/***/ function(module, exports, __webpack_require__) {
+
+	var echarts = __webpack_require__(13);
+	var gb = __webpack_require__(28);
+
+	module.exports = function() {
+		var bgPatternImg = new Image();
+		bgPatternImg.src = "http://cbpc540.applinzi.com/topic/exam/assets/img/led.jpg";
+
+		var bg = {
+			image: bgPatternImg,
+			repeat: 'repeat'
+		};
+
+		var fontFamily = ['Microsoft JhengHei', "Microsoft YaHei", "Arial", "黑体"];
+
+		var color = ["#61A5E8", "#7ECF51", "#EECB5F", "#E4925D", "#E16757", "#9570E5", "#605FF0", "#85ca36", "#1c9925", "#0d8b5f", "#0f9cd3", "#2f7e9b", "#2f677d", "#9b7fed", "#7453d6", "#3b1d98", "#27abb1", "#017377", "#015f63", "#b86868", "#5669b7", "#e5aab4", "#60b65f", "#98d2b2", "#c9c8bc", "#45c3dc", "#e17979", "#5baa5a", "#eaccc2", "#ffaa74"];
+		var seriesData = [];
+		var legendData = ['准确率 Top 25', '得分 Top 25'];
+		for (var i = 0; i < 2; i++) {
+			seriesData.push({
+				name: legendData[i],
+				type: 'bar',
+				symbol: 'none',
+				barMaxWidth: 60,
+				barMinHeight: 50,
+				xAxisIndex: i,
+				yAxisIndex: i,
+				itemStyle: {
+					normal: {
+						//opacity:0.9,
+						color: new echarts.graphic.LinearGradient(0, 0, 1, 1, [{
+							offset: 0,
+							color: 'rgba(60, 174, 65,1)'
+						}, {
+							offset: 1,
+							color: 'rgb(25,183, 177)'
+						}]),
+						//color: color[i+6],
+						label: {
+							show: true,
+							textStyle: {
+								fontSize: 18,
+								color: '#fff',
+								fontFamily: fontFamily
+							},
+							position: /*i ? 'insideLeft' : */ 'insideRight',
+							formatter: '{c}' + (i ? '分' : '%')
+						}
+					}
+				},
+				data: []
+			});
+		}
+		var yAxisData = [],
+			xAxisData = [],
+			gridData = [];
+		for (i = 0; i < 2; i++) {
+			yAxisData.push({
+				type: 'category',
+				name: legendData[i],
+				gridIndex: i,
+				nameGap: 15,
+				nameTextStyle: {
+					fontSize: 20
+				},
+				axisLine: {
+					show: false,
+					lineStyle: {
+						color: '#ddd'
+					}
+				},
+				axisTick: {
+					show: false,
+					lineStyle: {
+						color: '#ddd'
+					}
+				},
+				//inverse: i,
+				//position: i ? 'right' : 'left',
+				axisLabel: {
+					interval: 0,
+					textStyle: {
+						color: '#ddd',
+						fontSize: 18,
+						fontFamily: fontFamily
+					}
+				},
+				data: []
+			});
+			xAxisData.push({
+				type: 'value',
+				scale: true,
+				gridIndex: i,
+				boundaryGap: false,
+				splitLine: {
+					show: false
+				},
+				show: false
+			});
+			//准确率排序
+			gridData.push({
+				top: 160,
+				right: '4%',
+				left: (4 + i * 28) + '%',
+				width: '25%',
+				bottom: '3%',
+				containLabel: true
+			});
+		}
+
+		var cmpData = ['各小组得分Top 6', '答题速度Top 10'];
+		for (i = 0; i < 2; i++) {
+			xAxisData.push({
+				type: 'category',
+				gridIndex: i + 2,
+				axisLine: {
+					show: false,
+					lineStyle: {
+						color: '#ddd'
+					}
+				},
+				axisTick: {
+					show: false,
+					lineStyle: {
+						color: '#ddd'
+					}
+				},
+				axisLabel: {
+					interval: 0,
+					textStyle: {
+						color: '#ddd',
+						fontSize: 14,
+						fontFamily: fontFamily
+					}
+				},
+				data: []
+			});
+			yAxisData.push({
+				type: 'value',
+				scale: true,
+				gridIndex: i + 2,
+				boundaryGap: false,
+				splitLine: {
+					show: false
+				},
+				max: 200,
+				min: 0,
+				show: false
+			});
+			seriesData.push({
+				name: cmpData[i],
+				type: 'bar',
+				symbol: 'none',
+				xAxisIndex: i + 2,
+				yAxisIndex: i + 2,
+				barMinHeight: 10,
+				barMaxWidth: 60,
+				itemStyle: {
+					normal: {
+						//opacity:0.5,
+						color: color[i],
+						label: {
+							show: true,
+							textStyle: {
+								fontSize: 18,
+								color: '#fafafa',
+								fontFamily: fontFamily
+							},
+							formatter: '{c}',
+							position: 'top'
+						}
+					}
+				},
+				data: [] // [9, 12, 15, 23, 25].reverse()
+			});
+			//分组排名
+			gridData.push({
+				top: (44 + i * 30) + '%',
+				left: '55%',
+				width: '44%',
+				height: '21%',
+				containLabel: true
+			});
+		}
+
+
+		seriesData.push({
+			name: 'pie',
+			type: 'pie',
+			selectedMode: 'single',
+			selectedOffset: 30,
+			clockwise: true,
+			center: ['83%', '27%'],
+			radius: ['12%', '20%'],
+			label: {
+				normal: {
+					textStyle: {
+						fontSize: 18,
+						color: '#ddd',
+						fontFamily: fontFamily
+					}
+				}
+			},
+			labelLine: {
+				normal: {
+					lineStyle: {
+						color: '#ddd'
+					},
+					length: 10,
+					length2: 15,
+					smooth: true
+				}
+			},
+			data: [],
+			itemStyle: {
+				normal: {
+					color: color[5],
+					borderWidth: 0.5,
+					borderColor: '#fff'
+				}
+			}
+		});
+		var col3x = '58%';
+		option = {
+			backgroundColor: 'rgb(42,47,71)', //bg,//
+			title: [{
+					top: 20,
+					text: gb.title,
+					subtext: '当前已连接人数：0',
+					textStyle: {
+						color: '#eee',
+						fontSize: '40',
+						fontFamily: fontFamily
+					},
+					subtextStyle: {
+						color: '#ddd',
+						fontSize: '30',
+						fontFamily: fontFamily
+					},
+					x: 'center'
+				},
+				/*{
+				x: 'right',
+				y: '10%',
+				text: '各小组参赛人数',
+				textStyle: {
+					color: '#eee',
+					fontSize: '20',
+					fontFamily: fontFamily
+				},
+			},*/
+				{
+					x: col3x,
+					y: '37%',
+					text: cmpData[0],
+					textStyle: {
+						color: '#eee',
+						fontSize: '20',
+						fontFamily: fontFamily
+					},
+				}, {
+					x: col3x,
+					y: '66%',
+					text: cmpData[1],
+					textStyle: {
+						color: '#eee',
+						fontSize: '20',
+						fontFamily: fontFamily
+					},
+				}
+			],
+			tooltip: {
+				trigger: 'item'
+			},
+			toolbox: {
+				show: true,
+				feature: {
+					restore: {
+						show: true
+					},
+					saveAsImage: {
+						show: true
+					}
+				}
+			},
+			grid: gridData,
+			xAxis: xAxisData,
+			yAxis: yAxisData,
+			series: seriesData
+		};
+
+		return option;
+	};
+
+/***/ },
+
+/***/ 57:
+/***/ function(module, exports, __webpack_require__) {
+
+	var updateChart = __webpack_require__(58);
+
+	module.exports = {
+		start: function(gb, timeLength) {
+			var timeTicket = setInterval(function() {
+				updateChart.answeredNums(gb);
+				updateChart.realScore(gb);
+				updateChart.realScoreRate(gb);
+				updateChart.scoreByGroup(gb);
+				updateChart.answerSpeed(gb);
+			}, timeLength);
+		},
+		stop: function() {
+
+		}
+	};
+
+/***/ },
+
+/***/ 58:
+/***/ function(module, exports) {
+
+	function handleBarData(obj, gb, i) {
+		var scoreOrder = {
+			xAxis: [],
+			yAxis: []
+		};
+
+		obj.map(function(userInfo, i) {
+			scoreOrder.yAxis[i] = userInfo.name + ' (' + userInfo.user_dpt + ') ';
+			scoreOrder.xAxis[i] = userInfo.value;
+
+		});
+
+		gb.option.xAxis[i].min = scoreOrder.xAxis[obj.length - 1] - 10;
+		gb.option.series[i].data = scoreOrder.xAxis.reverse();
+		gb.option.yAxis[i].data = scoreOrder.yAxis.reverse();
+		gb.myChart[0].setOption(gb.option);
+	}
+
+	module.exports = {
+		realScore: function(gb) { //所有人员得分排名
+			$.ajax({
+				url: 'http://cbpc540.applinzi.com/index.php?s=/addon/GoodVoice/GoodVoice/getRealScore&nums=25',
+				data: {
+					sportid: gb.sportid
+				},
+				async: false,
+				dataType: "jsonp",
+				callback: "JsonCallback"
+			}).done(function(obj) {
+				handleBarData(obj, gb, 1);
+			});
+		},
+		realScoreRate: function(gb) {
+			$.ajax({
+				url: 'http://cbpc540.applinzi.com/index.php?s=/addon/GoodVoice/GoodVoice/getRealScoreRate&nums=25&perscore=' + gb.perScore,
+				data: {
+					sportid: gb.sportid
+				},
+				async: false,
+				dataType: "jsonp",
+				callback: "JsonCallback"
+			}).done(function(obj) {
+				handleBarData(obj, gb, 0);
+			});
+		},
+		scoreByGroup: function(gb) {
+			//小组得分排序
+			$.ajax({
+				url: 'http://cbpc540.applinzi.com/index.php?s=/addon/GoodVoice/GoodVoice/getScoreByGroup',
+				data: {
+					sportid: gb.sportid
+				},
+				async: false,
+				dataType: "jsonp",
+				callback: "JsonCallback"
+			}).done(function(obj) {
+
+				var scoreOrder = {
+					xAxis: [],
+					yAxis: []
+				};
+
+				obj.map(function(userInfo, i) {
+
+					scoreOrder.xAxis[i] = userInfo.dpt;
+					scoreOrder.yAxis[i] = userInfo.score;
+
+				});
+				gb.option.series[2].data = scoreOrder.yAxis;
+				gb.option.xAxis[2].data = scoreOrder.xAxis;
+
+				gb.myChart[0].setOption(gb.option);
+			});
+		},
+		answerSpeed: function(gb) {
+			//小组得分排序
+			$.ajax({
+				url: 'http://cbpc540.applinzi.com/index.php?s=/addon/GoodVoice/GoodVoice/getAnswerSpeed',
+				data: {
+					sportid: gb.sportid
+				},
+				async: false,
+				dataType: "jsonp",
+				callback: "JsonCallback"
+			}).done(function(obj) {
+
+				var scoreOrder = {
+					xAxis: [],
+					yAxis: []
+				};
+				obj.map(function(userInfo, j) {
+
+					scoreOrder.xAxis[j] = userInfo.user_name;
+					scoreOrder.yAxis[j] = userInfo.num;
+
+				});
+
+				gb.option.series[3].data = scoreOrder.yAxis;
+				gb.option.xAxis[3].data = scoreOrder.xAxis;
+
+				gb.myChart[0].setOption(gb.option);
+			});
+		},
+		answeredNums: function(gb) {
+
+			//小组得分排序
+			$.ajax({
+				url: 'http://cbpc540.applinzi.com/index.php?s=/addon/GoodVoice/GoodVoice/getAnsweredNums',
+				data: {
+					sportid: gb.sportid
+				},
+				async: false,
+				dataType: "jsonp",
+				callback: "JsonCallback"
+			}).done(function(obj) {
+				var scoreOrder = [];
+				var nums = 0;
+				obj.map(function(userInfo, i) {
+					scoreOrder[i] = {
+						name: 1,
+						value: 1
+					};
+					scoreOrder[i].name = userInfo.dpt;
+					scoreOrder[i].value = userInfo.nums;
+					nums += Number.parseInt(userInfo.nums);
+				});
+				gb.option.series[4].data = scoreOrder;
+
+				gb.option.title[0].subtext = '当前已连接人数：' + nums;
+
+				gb.myChart[0].setOption(gb.option);
+			});
+		}
+	};
+
 /***/ }
-/******/ ]);
+
+/******/ });

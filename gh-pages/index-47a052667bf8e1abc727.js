@@ -111,8 +111,8 @@
 		function randomID(i) {
 			return Math.ceil(Math.random() * i);
 		}
-		var bgmid = randomID(6);
-		$('#autoplay').attr('src', '//cbpc540.applinzi.com/topic/exam/assets/audio/bgm' + bgmid + '.mp3');
+		var bgmid = randomID(7);
+		$('#autoplay').attr('src', '//cbpm.applinzi.com/bgm/bgm' + bgmid + '.mp3');
 		var audio = document.getElementById('autoplay');
 		var controller = document.getElementById('musicBtn');
 		var controllerHint = document.getElementById('musicBtnTxt');
@@ -5296,7 +5296,7 @@
 		sportid: SPORT.QUALITY,
 		editAnswer: allowEdit, //允许修改答案
 		curID: 0, //当前答题数
-		realMatch: true, //实时提交分数，用于比赛中用户成绩获取
+		realMatch: false, //实时提交分数，用于比赛中用户成绩获取
 		showTips: false,
 		lastPage: 0,
 		secColor: [],
@@ -11515,7 +11515,7 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	var map = {
-		"./src/js/main.js": 55,
+		"./src/js/main.js": 54,
 		"node-libs-browser/node_modules/timers-browserify/example/enroll/js/main.js": 22,
 		"timers-browserify/example/enroll/js/main.js": 22,
 		"webpack/node_modules/node-libs-browser/node_modules/timers-browserify/example/enroll/js/main.js": 22
@@ -11738,8 +11738,7 @@
 /* 48 */,
 /* 49 */,
 /* 50 */,
-/* 51 */,
-/* 52 */
+/* 51 */
 /***/ function(module, exports) {
 
 	function jsRight(sr, rightn) {
@@ -12272,16 +12271,16 @@
 	};
 
 /***/ },
+/* 52 */,
 /* 53 */,
-/* 54 */,
-/* 55 */
+/* 54 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//公共资源
 	__webpack_require__(5);
 	__webpack_require__(26);
 	//var $ = require('jquery');
-	__webpack_require__(61);
+	__webpack_require__(60);
 	__webpack_require__(12);
 	var exam = __webpack_require__(24);
 	var PAPER = __webpack_require__(25);
@@ -12317,7 +12316,7 @@
 
 	initDom();
 
-	var util = __webpack_require__(52);
+	var util = __webpack_require__(51);
 	exam.type = util.getUrlParam('type');
 	if (exam.type === null) {
 		exam.type = 0;
@@ -12378,8 +12377,9 @@
 						'<p style="font-size:2.5em;">' + questionList['part' + pNum].name + '</p>' +
 						'</article>' +
 						'</div>' +
-						'<img src="./welcome.jpg" class="background_welcome" style="height:100%;width:100%;display:block;margin:0 auto;"/>' +
+						'<img src="./welcome2.jpg" class="background_welcome" style="height:100%;width:100%;display:block;margin:0 auto;"/>' +
 						'</div>';
+					//关卡背景及描述
 					$('[name="sucessInfo"]').before(strTips);
 				} else {
 					question = questionList;
@@ -12401,7 +12401,7 @@
 			//间隔背景
 			exam.lastPage = quesLen + 2 + exam.part;
 			exam.maxAnswerNum = quesLen;
-			$('[name="nums"]').text(quesLen);
+			$('[name="nums"]').text(exam.part+'关，'+(quesLen+1));
 
 			//关卡模式，每题4分，每关20分
 			exam.scoresPerAnswer = 4;
@@ -12460,12 +12460,12 @@
 	});
 
 /***/ },
+/* 55 */,
 /* 56 */,
 /* 57 */,
 /* 58 */,
 /* 59 */,
-/* 60 */,
-/* 61 */
+/* 60 */
 /***/ function(module, exports) {
 
 	var Efect = function(t) {

@@ -99,7 +99,7 @@ var app = function() {
 					'<p style="font-size:2.5em;">' + questionList['part' + pNum].name + '</p>' +
 					'</article>' +
 					'</div>' +
-					'<img src="./welcome.jpg" class="background_welcome" style="height:100%;width:100%;display:block;margin:0 auto;"/>' +
+					'<img src="./welcome2.jpg" class="background_welcome" style="height:100%;width:100%;display:block;margin:0 auto;"/>' +
 					'</div>';
 				//关卡背景及描述
 				$('[name="sucessInfo"]').before(strTips);
@@ -123,7 +123,7 @@ var app = function() {
 		//间隔背景
 		exam.lastPage = quesLen + 2 + exam.part;
 		exam.maxAnswerNum = quesLen;
-		$('[name="nums"]').text(quesLen);
+		$('[name="nums"]').text(exam.part+'关，'+(quesLen+1));
 
 		//关卡模式，每题4分，每关20分
 		exam.scoresPerAnswer = 4;
