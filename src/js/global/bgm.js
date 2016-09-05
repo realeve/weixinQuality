@@ -2,8 +2,8 @@ var audioInit = function() {
 	function randomID(i) {
 		return Math.ceil(Math.random() * i);
 	}
-	var bgmid = randomID(6);
-	$('#autoplay').attr('src', '//cbpc540.applinzi.com/topic/exam/assets/audio/bgm' + bgmid + '.mp3');
+	var bgmid = randomID(7);
+	$('#autoplay').attr('src', '//cbpm.applinzi.com/bgm/bgm' + bgmid + '.mp3');
 	var audio = document.getElementById('autoplay');
 	var controller = document.getElementById('musicBtn');
 	var controllerHint = document.getElementById('musicBtnTxt');
