@@ -28,9 +28,9 @@ var exam = {
 	isLogin: false, //是否登录
 	loginData: {}, //用户登录信息
 	maxAnswerNum: num, //最大抽取多少道题目
-	answerTimes: 0, //每个用户最多回答几次
+	answerTimes: 2, //每个用户最多回答几次
 	examPaper: "safe", //试卷文件
-	sportDate: "9月5日至25日",
+	sportDate: "9月7日至25日",
 	sportid: SPORT.QUALITY,
 	editAnswer: allowEdit, //允许修改答案
 	curID: 0, //当前答题数
@@ -43,7 +43,7 @@ var exam = {
 	part: 9, //答题关数
 	lastAnswerTime: 0,
 	curPart: 0,
-	passedPart:[]
+	passedPart: []
 };
 
 module.exports = exam;
