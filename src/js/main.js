@@ -123,7 +123,7 @@ var app = function() {
 		//间隔背景
 		exam.lastPage = quesLen + 2 + exam.part;
 		exam.maxAnswerNum = quesLen;
-		$('[name="nums"]').text(exam.part+'关，'+(quesLen+1));
+		$('[name="nums"]').text(exam.part + '关，' + quesLen);
 
 		//关卡模式，每题4分，每关20分
 		exam.scoresPerAnswer = 4;
