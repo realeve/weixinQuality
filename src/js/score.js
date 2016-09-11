@@ -40,7 +40,8 @@ var setSportDpt = function() {
 	str[4] = '<p style="font-size: 1em;padding-top:30px;">中钞长城贵金属有限公司</p>';
 	str[5] = '<p style="font-size: 1em;padding-top:30px;">能源环保部</p>';
 	str[6] = '<p style="font-size: 1em;padding-top:30px;">中国人民银行商洛市中心支行</p>';
-	str[7] = '<p style="font-size: 1em;padding-top:30px;">技术质量部</p>';
+	str[7] = '<p style="font-size: 1em;padding-top:30px;">技术质量部</p>' +
+		'<p style="font-size: 1em">党委宣传部</p>';
 	$('[name="sportMaster"]').html(str[gb.sportid]);
 }();
 
