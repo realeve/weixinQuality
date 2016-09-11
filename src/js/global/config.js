@@ -29,7 +29,7 @@ var exam = {
 	loginData: {}, //用户登录信息
 	maxAnswerNum: num, //最大抽取多少道题目
 	answerTimes: 2, //每个用户最多回答几次
-	examPaper: "safe", //试卷文件
+	examPaper: "quality", //试卷文件
 	sportDate: "9月7日至25日",
 	sportid: SPORT.QUALITY,
 	editAnswer: allowEdit, //允许修改答案

@@ -6,7 +6,8 @@
 	"GREATWALL": 4,
 	"POWER": 5,
 	"XIAN": 6,
-	"QUALITY":7
+	"QUALITY":7,
+	"QUALITY2":8
 };
 
 module.exports = SPORT;

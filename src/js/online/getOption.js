@@ -142,7 +142,7 @@ module.exports = function() {
 			splitLine: {
 				show: false
 			},
-			max: 200,
+			max: i === 0 ? gb.max1 : gb.max2,
 			min: 0,
 			show: false
 		});

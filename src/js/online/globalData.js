@@ -14,6 +14,10 @@ var sportid = getUrlParam('sid');
 var perScore = getUrlParam('score');
 var cht_title = getUrlParam('city');
 cht_title = (cht_title == null) ? '质量月微信现场竞答活动' : decodeURI(cht_title);
+var max1 = getUrlParam('max1');
+max1 = (max1 == null) ? 100 : max2;
+var max2 = getUrlParam('max1');
+max1 = (max2 == null) ? 100 : max2;
 
 var gb = {
 	//bgmid:2,
@@ -29,6 +33,8 @@ var gb = {
 		primaryLight: "#889acb"
 	},
 	title: cht_title,
+	max1: max1,
+	max2: max2,
 	option: {},
 	myChart: [],
 	dom: [],

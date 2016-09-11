@@ -80,7 +80,7 @@ var app = function() {
 
 	function getPaper() {
 
-		var questionList = require('./config/quality.json');
+		var questionList = require('./config/' + exam.examPaper + '.json');
 
 		var quesLen = 0;
 		exam.lastPage = 0;
@@ -144,9 +144,49 @@ var app = function() {
 		renderPaper();
 	}
 
+	function getRealPaper() {
+		var question = require('./config/' + PAPER[exam.sportid] + '.json');
+		var quesLen = question.length;
+
+		//管三活动，仅前200道题目参与问答
+		exam.sourceList = util.getRandomArr(quesLen);
+		//只抽取maxAnswerNum个
+		quesLen = (quesLen <= exam.maxAnswerNum) ? quesLen : exam.maxAnswerNum;
+		exam.maxAnswerNum = quesLen;
+
+		$('[name="nums"]').text(quesLen);
+		exam.scoresPerAnswer = 100 / quesLen;
+		//exam.scoresPerAnswer = 1;
+		$('[name="scores"]').text(exam.scoresPerAnswer.toFixed(0));
+
+		for (var i = 0; i < quesLen; i++) {
+			$('[name="sucessInfo"]').before(util.getExamTemplate(question[exam.sourceList[i]], i + 1));
+			exam.isAnswered[i] = 0;
+		}
+
+		//横向页面，部分内容布局修正
+		$('[name="fixed"]').css('width', 100 / (3 + exam.maxAnswerNum) + '%');
+
+		var str = '<div class="weui_opr_area"><p class="weui_btn_area"><a href="javascript:;" class="weui_btn weui_btn_primary weui_btn_primary_yellow" id="submit">交卷</a></p></div>';
+		$('.answer-num').last().parent().append(str);
+
+		//间隔背景
+		exam.lastPage = quesLen + 3;
+		for (i = 0; i < exam.lastPage; i++) {
+			exam.secColor[i] = (i % 2) ? '#fff' : '#445';
+		}
+
+		document.getElementById('autoplay').play();
+		renderPaper();
+	}
+
 	function loadQuestions() {
 
-		getPaper();
+		if (exam.type == 1) {
+			getPaper();
+		} else {
+			getRealPaper();
+		}
 
 		$('.weui_cell_bd,.weui_cell_hd').on('click', function() {
 
