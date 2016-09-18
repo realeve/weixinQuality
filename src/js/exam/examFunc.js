@@ -442,12 +442,17 @@ module.exports = {
 			//未到每关最后一题 //未到最后一题
 			//if (curID <= exam.maxAnswerNum - 1) {
 			//如果当前答对，并且在实时比赛模式才提交分数
-			if ( /*curScore && */ exam.realMatch) {
-				//直接提交当前数据，不需审核
-				exam = submitData(false, curID, exam);
-			} else {
-				$.fn.fullpage.moveSlideRight();
-			}
+			//
+
+			//2016-09-13注释，两次跳转页面
+			// if ( /*curScore && */ exam.realMatch) {
+			// 	//直接提交当前数据，不需审核
+			// 	exam = submitData(false, curID, exam);
+			// } else {
+			// 	$.fn.fullpage.moveSlideRight();
+			// }
+
+
 			// if (!needCheck) {
 			// 	setTimeout(function() {
 			// 		$.fn.fullpage.moveTo(0, curID + 4 + order);
